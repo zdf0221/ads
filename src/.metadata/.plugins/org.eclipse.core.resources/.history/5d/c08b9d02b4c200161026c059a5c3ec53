@@ -1,0 +1,29 @@
+package wu.leizi.Driver;
+
+import wu.leizi.moniterContent.configContent;
+
+public class HBClientDriver implements HeartBeatDriver {
+
+	public void put() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void get() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public String getTopic() {
+		// TODO Auto-generated method stub
+		return configContent.getInstance().getHBTopic();
+	}
+
+	public String getStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

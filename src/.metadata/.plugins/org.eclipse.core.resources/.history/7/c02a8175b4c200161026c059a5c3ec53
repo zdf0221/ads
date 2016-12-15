@@ -1,0 +1,10 @@
+package wu.leizi.main;
+
+public class HBClientTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+	}
+
+}
