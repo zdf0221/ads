@@ -1,0 +1,31 @@
+package wu.leizi.moniterConfig;
+
+import java.util.ArrayList;
+
+public class configContent {
+	private double HeartBeatInterval;
+	private double TimeOutInterval;
+	private String brokerList;
+	private String zookeeperConnect;
+	private static configContent instance = null;
+	private configContent() {
+		HeartBeatInterval = 300;
+		TimeOutInterval = 1000;
+		brokerList = "127.0.0.1:9092";
+	}
+	public configContent getInstance() {
+		if (instance == null) instance = new configContent();
+		return instance;
+	}
+	public double getHeartBeatInterval() {
+		return HeartBeatInterval;
+	}
+	public double getTimeOutInterval() {
+		return TimeOutInterval;
+	}
+
+	public boolean refresh(){
+		return true;
+	}
+	public String get
+}

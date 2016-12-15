@@ -1,0 +1,7 @@
+package wu.leizi.moniterContent;
+
+import java.util.ArrayList;
+
+public class mangeContent {
+	private ArrayList<Driver> DriverList
+}

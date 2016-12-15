@@ -1,0 +1,48 @@
+package wu.leizi.moniterConfig;
+
+import java.util.ArrayList;
+import java.util.Properties;
+
+import kafka.consumer.ConsumerConfig;
+
+public class configContent {
+	private double HeartBeatInterval;
+	private double TimeOutInterval;
+	private ConsumerConfig Consumerconfig;
+	private static configContent instance = null;
+	private configContent() {
+		HeartBeatInterval = 300;
+		TimeOutInterval = 1000;
+		Properties props = new Properties();
+        //zookeeper 配置
+        props.put("zookeeper.connect", "127.0.0.1:2181");
+
+        //group 代表一个消费组
+        props.put("group.id", "jd-group");
+
+        //zk连接超时
+        props.put("zookeeper.session.timeout.ms", "4000");
+        props.put("zookeeper.sync.time.ms", "200");
+        props.put("auto.commit.interval.ms", "1000");
+        props.put("auto.offset.reset", "smallest");
+        //序列化类
+        props.put("serializer.class", "kafka.serializer.StringEncoder");
+
+        ConsumerConfig config = new ConsumerConfig(props);
+	}
+	public configContent getInstance() {
+		if (instance == null) instance = new configContent();
+		return instance;
+	}
+	public double getHeartBeatInterval() {
+		return HeartBeatInterval;
+	}
+	public double getTimeOutInterval() {
+		return TimeOutInterval;
+	}
+
+	public boolean refresh(){
+		return true;
+	}
+	public String getB
+}

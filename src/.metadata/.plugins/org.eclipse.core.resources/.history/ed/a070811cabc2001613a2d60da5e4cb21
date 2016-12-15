@@ -1,0 +1,11 @@
+package wu.leizi.moniterContent;
+
+public class mangeFactory {
+	private static mangeFactory instance = null;
+	private mangeFactory() {
+		
+	}
+	public static mangeFactory getInstance() {
+		return instance;
+	}
+}

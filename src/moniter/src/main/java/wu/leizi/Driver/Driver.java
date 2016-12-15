@@ -1,0 +1,7 @@
+package wu.leizi.Driver;
+
+public interface Driver {
+	public void put();
+	public void get();
+	public String getStatus();
+}

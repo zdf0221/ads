@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="kafka.consumer.ConsumerConfig"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterConfig.configContent"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterContent.mangeFactory"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterContent.mangeContent"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.Driver"/>
+</qualifiedTypeNameHistroy>

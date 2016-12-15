@@ -1,0 +1,5 @@
+package wu.leizi.Driver;
+
+public interface HeartBeatDriver extends {
+
+}
