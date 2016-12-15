@@ -1,0 +1,8 @@
+package wu.leizi.Driver;
+
+public class DriverFactory {
+	private static DriverFactory instance = null;
+	public DriverFactory() {
+		
+	}
+}

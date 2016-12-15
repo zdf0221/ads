@@ -1,0 +1,19 @@
+package wu.leizi.moniterContent;
+
+import java.util.ArrayList;
+
+import wu.leizi.Driver.Driver;
+
+public class HBContent {
+	private ArrayList<Driver> DriverList;
+	public HBContent() {
+		DriverList = new ArrayList<Driver>();
+	}
+	public ArrayList<String> getStatus() {
+		ArrayList<String> ret = new ArrayList<String>();
+		for (Driver ent : DriverList) {
+			ret.add(ent.getStatus());
+		}
+		return ret;
+	}
+}

@@ -1,0 +1,8 @@
+package wu.leizi.moniterContent;
+
+public class contentFactory {
+
+	public HBContent createMC() {
+		return new HBContent();
+	}
+}

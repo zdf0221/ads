@@ -6,7 +6,7 @@ public class HBServerTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new HBServerDriver().get();
+		new HBServerDriver().start();
 	}
 
 }

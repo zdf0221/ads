@@ -1,0 +1,32 @@
+package wu.leizi.moniterContent;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import wu.leizi.Driver.Driver;
+
+public class HBContent {
+	private HashMap<String, Driver> DriverList;
+	private HashMap<String, Boolean> checkList;
+	public HBContent() {
+		DriverList = new HashMap<String, Driver>();
+	}
+	
+	public ArrayList<String> getStatus() {
+		ArrayList<String> ret = new ArrayList<String>();
+		for (String ent : DriverList.keySet()) {
+			ret.add(ent + ":" + DriverList.get(ent).getStatus());
+		}
+		return ret;
+	}
+	
+	public void check() {
+		for (String ent : checkList.keySet()) {
+			if (! checkList.get(ent)) DriverList.remove(ent);
+		}
+	}
+	
+	public void active(String ent) {
+		if ()
+	}
+}

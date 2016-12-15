@@ -1,0 +1,55 @@
+package wu.leizi.Driver;
+
+import kafka.javaapi.producer.Producer;
+import kafka.producer.KeyedMessage;
+import wu.leizi.moniterContent.configContent;
+
+public class HBClientDriver implements HeartBeatDriver {
+	private final Producer<String, String> producer;
+	private HeartBeatThread HBThread;
+	private String id;
+	public HBClientDriver(String id) {
+		producer = new Producer<String, String>(configContent.getInstance().ProduceConfig());
+	}
+	
+	public void put() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void get() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public String getTopic() {
+		// TODO Auto-generated method stub
+		return configContent.getInstance().getHBTopic();
+	}
+
+	public String getStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	class HeartBeatThread extends Thread {
+		
+		public void run() {
+			// TODO Auto-generated method stub
+			Task();
+		}
+		private void Task() throws InterruptedException {
+			// TODO Auto-generated method stub
+			long no = 0;
+	        while (true) {
+	        	String key = String.valueOf(no++);
+	            String data = this.getClass().toString() + "/" + id;
+	            producer.send(new KeyedMessage<String, String>(configContent.getInstance().getHBTopic(), key ,data));
+	            System.out.println(data);
+	            Thread.sleep(configContent.getInstance().getHeartBeatInterval());
+	        }
+		}
+		
+	}
+}
+

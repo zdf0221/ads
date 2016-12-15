@@ -1,0 +1,13 @@
+package wu.leizi.Driver;
+
+public class DriverFactory {
+	
+	public static Driver factory(String ent) {
+		if (ent.equals(new HBClientDriver("0"))) {
+			return new HBClientDriver();
+		}
+		else {
+			return new HBServerDriver();
+		}
+	}
+}

@@ -1,14 +1,8 @@
 package wu.leizi.moniterContent;
 
 public class contentFactory {
-	private static contentFactory instance = null;
-	private contentFactory() {
-		
-	}
-	public static contentFactory getInstance() {
-		return instance;
-	}
-	public HBContent createMC() {
+
+	public static HBContent createHBC() {
 		return new HBContent();
 	}
 }
