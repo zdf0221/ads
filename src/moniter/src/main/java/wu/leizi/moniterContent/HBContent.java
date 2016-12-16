@@ -5,6 +5,7 @@ import java.util.Hashtable;
 
 import wu.leizi.Driver.Driver;
 import wu.leizi.Driver.DriverFactory;
+import wu.leizi.data.HeartBeatData;
 
 public class HBContent {
 	private Hashtable<String, Driver> DriverList;
@@ -32,12 +33,13 @@ public class HBContent {
 		}
 	}
 	
-	public void active(String ent) {
-		Driver ans = DriverList.get(ent);
+	public void active(HeartBeatData ent) {
+		Driver ans = DriverList.get(ent.get("Id"));
+		String id = (String) ent.get("Id");
 		if (ans == null){
-			ans = DriverFactory.factory(ent.split("-"));
-			DriverList.put(ent, ans);
+			ans = DriverFactory.factory(ent);
+			DriverList.put(id, ans);
 		}
-		checkList.put(ent, true);
+		checkList.put(id, true);
 	}
 }

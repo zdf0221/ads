@@ -14,11 +14,13 @@
 	</section>
 	<section name="FatJarPackageWizard">
 		<item value="E:\Vagrant" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
-		<item value="KafkaProducer - moniter" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="moniter\target\Producer.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="HBClientTest - moniter" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="E:\Vagrant\share\HBClient.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="3" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="E:\Vagrant\share\HBClient.jar"/>
+			<item value="E:\Vagrant\share\HBServer.jar"/>
 			<item value="moniter\target\Producer.jar"/>
 			<item value="moniter/target/consumer.jar"/>
 		</list>

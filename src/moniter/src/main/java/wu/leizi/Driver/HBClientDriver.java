@@ -2,15 +2,18 @@ package wu.leizi.Driver;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
+import wu.leizi.data.HeartBeatData;
 import wu.leizi.moniterContent.configContent;
 
 public class HBClientDriver implements HeartBeatDriver {
 	private final Producer<String, String> producer;
 	private HeartBeatThread HBThread;
 	private String id;
-	public HBClientDriver(String id) {
+	private String content;
+	public HBClientDriver(String id, String content) {
 		producer = new Producer<String, String>(configContent.getInstance().ProduceConfig());
 		this.id = id;
+		this.content = content;
 	}
 	
 	public void put() {
@@ -32,7 +35,12 @@ public class HBClientDriver implements HeartBeatDriver {
 	public String getStatus() {
 		// TODO Auto-generated method stub
 //		String ret = "HB Status:" + HBThread.isAlive();
-		return "alive";
+		return content;
+	}
+	
+	public String ServiceStatus(){
+		String ret = "HBService:" + HBThread.isAlive();
+		return ret;
 	}
 	
 	class HeartBeatThread extends Thread {
@@ -46,9 +54,10 @@ public class HBClientDriver implements HeartBeatDriver {
 			long no = 0;
 	        while (true) {
 	        	String key = String.valueOf(no++);
-	            String data = "ClientTest-" + id;
-	            producer.send(new KeyedMessage<String, String>(configContent.getInstance().getHBTopic(), key ,data));
-	            System.out.println(data);
+	            HeartBeatData data = new HeartBeatData("HBClient", "HBClient-"+id);
+	            data.put("content", ServiceStatus());
+	            producer.send(new KeyedMessage<String, String>(configContent.getInstance().getHBTopic(), key ,data.toString()));
+//	            System.out.println(data);
 	            try {
 					Thread.sleep(configContent.getInstance().getHeartBeatInterval());
 				} catch (InterruptedException e) {

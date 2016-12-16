@@ -1,0 +1,12 @@
+package wu.leizi.util;
+
+import kafka.serializer.Encoder;
+
+public class JsonEncoder implements Encoder<T> {
+
+	public byte[] toBytes(T arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

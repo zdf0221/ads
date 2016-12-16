@@ -1,0 +1,26 @@
+package wu.leizi.data;
+
+import org.json.JSONObject;
+
+public class HeartBeatData {
+	private JSONObject data;
+	public HeartBeatData(String content) {
+		this.data = new JSONObject(content);
+	}
+	
+	public void put(String key, String value) {
+		data.put(key, value);
+	}
+	
+	public void put(String key, double value) {
+		data.put(key, value);
+	}
+	
+	public void put(String key, boolean value) {
+		data.put(key, value);
+	}
+	
+	public void put(String key,  value) {
+		data.put(key, value);
+	}
+}

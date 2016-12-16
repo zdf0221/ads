@@ -1,7 +1,0 @@
-package wu.leizi.moniterConfig;
-
-import java.util.ArrayList;
-
-public class mangeContent {
-	private ArrayList<E>
-}

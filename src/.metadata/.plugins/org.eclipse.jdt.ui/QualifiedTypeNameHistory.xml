@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="kafka.consumer.ConsumerConfig"/>
 <fullyQualifiedTypeName name="wu.leizi.moniterConfig.configContent"/>
 <fullyQualifiedTypeName name="wu.leizi.moniterContent.mangeFactory"/>
 <fullyQualifiedTypeName name="wu.leizi.moniterContent.mangeContent"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.Driver"/>
+<fullyQualifiedTypeName name="wu.leizi.data.HeartBeatData"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver"/>
+<fullyQualifiedTypeName name="scala.collection.mutable.HashTable"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.DriverFactory"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterContent.contentFactory"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterContent.HBContent"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.CheckThread"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.listenThread"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.HBClientDriver"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterContent.configContent"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.HBClientDriver.HeartBeatThread"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
