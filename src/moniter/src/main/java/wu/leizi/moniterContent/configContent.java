@@ -11,8 +11,10 @@ public class configContent {
 	private Properties conProps;
 	private Properties proProps;
 	private String HeartBeatTopic;
+	private int ServerWebPort;
 	private static configContent instance = null;
 	private configContent() {
+		ServerWebPort = 8080;
 		HeartBeatInterval = 300;
 		TimeOutInterval = 1000;
 		HeartBeatTopic = "HEARTBEAT-TOPIC";
@@ -45,14 +47,17 @@ public class configContent {
         //1, which means that the producer gets an acknowledgement after the leader replica has received the data. This option provides better durability as the client waits until the server acknowledges the request as successful (only messages that were written to the now-dead leader but not yet replicated will be lost).
         //-1, which means that the producer gets an acknowledgement after all in-sync replicas have received the data. This option provides the best durability, we guarantee that no messages will be lost as long as at least one in sync replica remains.
 		proProps.put("request.required.acks","-1");
-
-		
 		
 	}
+	
 	
 	public static configContent getInstance() {
 		if (instance == null) instance = new configContent();
 		return instance;
+	}
+	
+	public int getServerWebPort() {
+		return ServerWebPort;
 	}
 	
 	public long getHeartBeatInterval() {

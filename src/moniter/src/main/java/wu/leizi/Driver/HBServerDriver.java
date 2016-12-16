@@ -1,8 +1,12 @@
 package wu.leizi.Driver;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Executors;
 
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
@@ -15,12 +19,18 @@ import wu.leizi.moniterContent.HBContent;
 import wu.leizi.moniterContent.configContent;
 import wu.leizi.moniterContent.contentFactory;
 
+import com.sun.net.httpserver.Headers;  
+import com.sun.net.httpserver.HttpExchange;  
+import com.sun.net.httpserver.HttpHandler;  
+import com.sun.net.httpserver.HttpServer;
+
 public class HBServerDriver implements HeartBeatDriver {
 	private final ConsumerConnector consumer;
 	private final ConsumerConfig config;
 	private HBContent HBcontent;
 	private CheckThread checkloop;
 	private listenThread listenloop;
+	private webThread web;
 	public HBServerDriver() {
 		config = configContent.getInstance().ConsumerConfig();
 		consumer = kafka.consumer.Consumer.createJavaConsumerConnector(config);
@@ -39,6 +49,9 @@ public class HBServerDriver implements HeartBeatDriver {
 		checkloop = new CheckThread();
 		checkloop.start();
 		System.out.println("check loop started.");
+		web = new webThread();
+		web.start();
+		System.out.println("Wen Started.");
 //		checkloop.setDaemon(true);
 	}
 
@@ -80,6 +93,7 @@ public class HBServerDriver implements HeartBeatDriver {
 		}	
 	}
 	
+	
 	class listenThread extends Thread {
 		
 		public void run() {
@@ -107,4 +121,39 @@ public class HBServerDriver implements HeartBeatDriver {
 		}
 		
 	}
+	
+	class webThread extends Thread {
+		
+		public void run() {
+			// TODO Auto-generated method stub
+			try {
+				InetSocketAddress addr = new InetSocketAddress(configContent.getInstance().getServerWebPort());  
+		        HttpServer server = HttpServer.create(addr, 0);  
+		        server.createContext("/", new MyHandler());  
+		        server.setExecutor(Executors.newCachedThreadPool());  
+		        server.start();  
+		        System.out.println("Server Thread started"); 
+			} catch (Exception e) {
+				// TODO: handle exception
+			} 
+		}
+	}
+	
+	class MyHandler implements HttpHandler {
+	      
+	    public void handle(HttpExchange exchange) throws IOException{  
+	          
+	        String requestMethod = exchange.getRequestMethod(); 
+	        if (requestMethod.equalsIgnoreCase("GET")) {  
+	            Headers responseHeaders = exchange.getResponseHeaders();  
+	            responseHeaders.set("Content-Type", "text/html");  
+	            exchange.sendResponseHeaders(200, 0);
+	            String ret = HBcontent.getStatus();
+	            OutputStream responseBody = exchange.getResponseBody();  
+	            responseBody.write(ret.getBytes());
+	            responseBody.close();  
+	        }
+	         
+	    }
+	}  
 }

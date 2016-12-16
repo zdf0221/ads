@@ -15,11 +15,11 @@ public class HBContent {
 		checkList = new Hashtable<String, Boolean>();
 	}
 	
-	public ArrayList<String> getStatus() {
-		ArrayList<String> ret = new ArrayList<String>();
+	public String getStatus() {
+		String ret = "<h1>Result:</h1>";
 		System.out.println("==================\nResult:");
 		for (String ent : DriverList.keySet()) {
-			ret.add(ent + ":\t" + DriverList.get(ent).getStatus());
+			ret += ent + ": " + DriverList.get(ent).getStatus()+"<br>";
 			System.out.println(ent + " " + DriverList.get(ent).getStatus());
 		}
 		System.out.println();
