@@ -132,7 +132,7 @@ public class HBServerDriver implements HeartBeatDriver {
 		        server.createContext("/", new MyHandler());  
 		        server.setExecutor(Executors.newCachedThreadPool());  
 		        server.start();  
-		        System.out.println("Server Thread started on " +configContent.getInstance().getServerWebPort()); 
+		        System.out.println("Server Thread started"); 
 			} catch (Exception e) {
 				// TODO: handle exception
 			} 

@@ -5548,3 +5548,11 @@ org.apache.maven.artifact.InvalidArtifactRTException: For artifact {null:null:nu
 2016-12-16 17:58:24,437 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Vagrant\src\moniter\src\main\resources
 2016-12-16 17:58:24,437 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2016-12-16 17:58:24,437 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Vagrant\src\moniter\src\test\resources
+2016-12-16 18:05:23,225 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-16 18:05:23,226 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Vagrant\src\moniter\src\main\resources
+2016-12-16 18:05:23,226 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-16 18:05:23,226 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Vagrant\src\moniter\src\test\resources
+2016-12-16 18:05:37,904 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-16 18:05:37,905 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Vagrant\src\moniter\src\main\resources
+2016-12-16 18:05:37,905 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-16 18:05:37,905 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\Vagrant\src\moniter\src\test\resources
