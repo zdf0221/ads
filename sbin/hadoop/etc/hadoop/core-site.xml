@@ -23,7 +23,7 @@
     </property>
     <property>
         <name>hadoop.tmp.dir</name>
-        <value>file:/D:/hadoop/tmp</value>
+        <value>file:/vagrant/sbin/hadoop/tmp</value>
         <description>Abase for other temporary directories.</description>
     </property>
 </configuration>
