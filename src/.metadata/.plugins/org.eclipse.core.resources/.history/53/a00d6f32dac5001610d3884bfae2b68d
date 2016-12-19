@@ -1,0 +1,10 @@
+package wu.leizi.Demo;
+
+public class streamingKafka {
+	private static final Pattern SPACE = Pattern.compile(" ");
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

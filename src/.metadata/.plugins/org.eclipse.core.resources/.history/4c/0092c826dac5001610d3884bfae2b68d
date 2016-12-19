@@ -1,0 +1,10 @@
+package wu.leizi.Demo;
+
+public class streamingKafka {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
