@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=moniter/src\/main\/java&lt;wu.leizi.Driver{HeartBeatDriver.java[HeartBeatDriver" modifiers="513" timestamp="1481793108608"/>
+<typeInfo handle="=moniter/C:\/Users\/leizi\/.m2\/repository\/org\/apache\/kafka\/kafka_2.10\/0.8.2.0\/kafka_2.10-0.8.2.0.jar&lt;kafka.serializer(Encoder.class[Encoder" modifiers="1537" timestamp="1481705790431"/>
+<typeInfo handle="=moniter/src\/main\/java&lt;wu.leizi.Driver{Driver.java[Driver" modifiers="513" timestamp="1481795718214"/>
 </typeInfoHistroy>

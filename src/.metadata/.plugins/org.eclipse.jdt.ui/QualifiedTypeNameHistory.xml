@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="wu.leizi.moniterContent.mangeContent"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.Driver"/>
-<fullyQualifiedTypeName name="wu.leizi.data.HeartBeatData"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -15,12 +14,21 @@
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.DriverFactory"/>
 <fullyQualifiedTypeName name="wu.leizi.moniterContent.contentFactory"/>
-<fullyQualifiedTypeName name="wu.leizi.moniterContent.HBContent"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.CheckThread"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.listenThread"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBClientDriver"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="wu.leizi.moniterContent.configContent"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBClientDriver.HeartBeatThread"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.HeartBeatDriver"/>
+<fullyQualifiedTypeName name="wu.leizi.data.HeartBeatData"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.net.InetSocketAddress"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterContent.HBContent"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.webThread"/>
+<fullyQualifiedTypeName name="wu.leizi.moniterContent.configContent"/>
 </qualifiedTypeNameHistroy>
