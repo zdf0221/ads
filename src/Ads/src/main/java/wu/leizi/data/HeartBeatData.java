@@ -2,7 +2,7 @@ package wu.leizi.data;
 
 import org.json.JSONObject;
 
-public class HeartBeatData {
+public class HeartBeatData implements Data {
 	private JSONObject data;
 	public HeartBeatData(String content) {
 		data = new JSONObject(content);

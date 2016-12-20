@@ -1,0 +1,159 @@
+package wu.leizi.Driver.heartbeat;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.Executors;
+
+import kafka.consumer.ConsumerConfig;
+import kafka.consumer.ConsumerIterator;
+import kafka.consumer.KafkaStream;
+import kafka.javaapi.consumer.ConsumerConnector;
+import kafka.serializer.StringDecoder;
+import kafka.utils.VerifiableProperties;
+import wu.leizi.Content.HBContent;
+import wu.leizi.Content.contentFactory;
+import wu.leizi.config.HBConfig;
+import wu.leizi.data.HeartBeatData;
+
+import com.sun.net.httpserver.Headers;  
+import com.sun.net.httpserver.HttpExchange;  
+import com.sun.net.httpserver.HttpHandler;  
+import com.sun.net.httpserver.HttpServer;
+
+public class HBServerDriver implements HeartBeatDriver {
+	private final ConsumerConnector consumer;
+	private final ConsumerConfig config;
+	private HBContent HBcontent;
+	private CheckThread checkloop;
+	private listenThread listenloop;
+	private webThread web;
+	public HBServerDriver() {
+		config = HBConfig.getInstance().ConsumerConfig();
+		consumer = kafka.consumer.Consumer.createJavaConsumerConnector(config);
+		HBcontent = contentFactory.createHBC();
+	}
+	
+	public void start(){
+		get();
+		put();
+	}
+	
+	public void put() {
+		// TODO Auto-generated method stub
+		// check Drivers' status Loop
+		// Daemon Thread
+		checkloop = new CheckThread();
+		checkloop.start();
+		System.out.println("check loop started.");
+		web = new webThread();
+		web.start();
+		System.out.println("Wen Started.");
+//		checkloop.setDaemon(true);
+	}
+
+	public void get() {
+		// TODO Auto-generated method stub
+		// listen heart beat loop
+		// Daemon Thread
+		listenloop = new listenThread();
+		listenloop.start();
+		System.out.println("listen loop started.");
+//		listenloop.setDaemon(true);
+	}
+	
+	public String getTopic() {
+		// TODO Auto-generated method stub
+		return HBConfig.getInstance().getHBTopic();
+	}
+
+	public String getStatus() {
+		// TODO Auto-generated method stub
+//		String ret = "checkLoop:" + checkloop.isAlive() +"\nlistenLoop:" + listenloop.isAlive();
+		return "alive";
+	}
+	
+	class CheckThread extends Thread {
+
+		public void run() {
+			// TODO Auto-generated method stub
+			while (true) {
+				HBcontent.check();
+				try {
+					Thread.sleep(HBConfig.getInstance().getTimeOutInterval());
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				HBcontent.getStatus();
+			}
+		}	
+	}
+	
+	
+	class listenThread extends Thread {
+		
+		public void run() {
+			// TODO Auto-generated method stub
+			task();
+		}
+		private void task() {
+			// TODO Auto-generated method stub
+			Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
+	        topicCountMap.put(HBConfig.getInstance().getHBTopic(), new Integer(1));
+
+	        StringDecoder keyDecoder = new StringDecoder(new VerifiableProperties());
+	        StringDecoder valueDecoder = new StringDecoder(new VerifiableProperties());
+
+	        Map<String, List<KafkaStream<String, String>>> consumerMap = 
+	                consumer.createMessageStreams(topicCountMap,keyDecoder,valueDecoder);
+	        KafkaStream<String, String> stream = consumerMap.get(HBConfig.getInstance().getHBTopic()).get(0);
+	        ConsumerIterator<String, String> it = stream.iterator();
+	        while (it.hasNext()){
+	        	String msg = it.next().message();
+//	        	System.out.println(msg);
+	        	HeartBeatData data = new HeartBeatData(msg);
+	        	HBcontent.active(data);
+	        }
+		}
+		
+	}
+	
+	class webThread extends Thread {
+		
+		public void run() {
+			// TODO Auto-generated method stub
+			try {
+				InetSocketAddress addr = new InetSocketAddress(HBConfig.getInstance().getServerWebPort());  
+		        HttpServer server = HttpServer.create(addr, 0);  
+		        server.createContext("/", new MyHandler());  
+		        server.setExecutor(Executors.newCachedThreadPool());  
+		        server.start();  
+		        System.out.println("Server Thread started on " +HBConfig.getInstance().getServerWebPort()); 
+			} catch (Exception e) {
+				// TODO: handle exception
+			} 
+		}
+	}
+	
+	class MyHandler implements HttpHandler {
+	      
+	    public void handle(HttpExchange exchange) throws IOException{  
+	          
+	        String requestMethod = exchange.getRequestMethod(); 
+	        if (requestMethod.equalsIgnoreCase("GET")) {  
+	            Headers responseHeaders = exchange.getResponseHeaders();  
+	            responseHeaders.set("Content-Type", "text/html");  
+	            exchange.sendResponseHeaders(200, 0);
+	            String ret = HBcontent.getStatus();
+	            OutputStream responseBody = exchange.getResponseBody();  
+	            responseBody.write(ret.getBytes());
+	            responseBody.close();  
+	        }
+	         
+	    }
+	} 
+}

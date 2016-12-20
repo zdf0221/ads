@@ -2,7 +2,7 @@ package wu.leizi.main;
 
 import java.util.Arrays;
 
-import wu.leizi.Driver.HBClientDriver;
+import wu.leizi.Driver.heartbeat.HBClientDriver;
 
 public class HBClientTest {
 

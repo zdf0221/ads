@@ -1,0 +1,11 @@
+package wu.leizi.project.moniter;
+
+import wu.leizi.Content.HBContent;
+
+public class moniter {
+	private HBContent HBcontent;
+	public moniter() {
+		// TODO Auto-generated constructor stub
+		
+	}
+}

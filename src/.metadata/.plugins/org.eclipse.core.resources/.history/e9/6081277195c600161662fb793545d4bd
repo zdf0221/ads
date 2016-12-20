@@ -1,0 +1,8 @@
+package wu.leizi.Content;
+
+public class contentFactory {
+
+	public static HBContent createContent() {
+		return new HBContent();
+	}
+}

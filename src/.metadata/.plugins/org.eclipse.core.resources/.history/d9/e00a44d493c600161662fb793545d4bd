@@ -1,0 +1,17 @@
+package wu.leizi.project.moniter;
+
+import wu.leizi.Content.HBContent;
+import wu.leizi.Content.contentFactory;
+
+public class moniter {
+	private HBContent HBcontent;
+	private moniterWeb web;
+	public moniter() {
+		// TODO Auto-generated constructor stub
+		HBcontent = contentFactory.createHBC();
+		
+		web = new moniterWeb(HBcontent);
+		web.start();
+		System.out.println("Web Started on Port " + config);
+	}
+}

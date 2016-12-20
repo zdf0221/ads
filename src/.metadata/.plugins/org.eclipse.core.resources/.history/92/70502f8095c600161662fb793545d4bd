@@ -1,0 +1,9 @@
+package wu.leizi.Content;
+
+public class contentFactory {
+
+	public static HBContent createContent(String type) {
+		if (type.contains(s))
+		return new HBContent();
+	}
+}
