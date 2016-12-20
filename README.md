@@ -1,5 +1,7 @@
 # ads
 Display Ads System
+sudo apt-get install redis-server
+
 sudo apt-get install openjdk-8-jre openjdk-8-jdk
 
 dpkg -L openjdk-8-jdk | grep '/bin/javac'
