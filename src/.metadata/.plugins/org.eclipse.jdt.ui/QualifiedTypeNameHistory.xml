@@ -31,4 +31,5 @@
 <fullyQualifiedTypeName name="wu.leizi.moniterContent.HBContent"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.webThread"/>
 <fullyQualifiedTypeName name="wu.leizi.moniterContent.configContent"/>
+<fullyQualifiedTypeName name="org.apache.spark.SparkConf"/>
 </qualifiedTypeNameHistroy>
