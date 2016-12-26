@@ -9,7 +9,7 @@ public class DriverFactory {
 	public static Driver factory(Data ent) throws Exception {
 		if (ent.get("Driver").equals("HBClient")) {
 			System.out.print("New HB Client");
-			return new HBClientDriver((String) ent.get("Id"), (String) ent.get("content"));
+			return new HBClientDriver((String) ent.get("Id"));
 		}
 		else if (ent.get("Driver").equals("HBServer")) {
 //			System.out.print("New HB Server");

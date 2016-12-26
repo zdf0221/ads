@@ -1,0 +1,57 @@
+package wu.leizi.config;
+
+import java.sql.Connection;  
+import java.sql.DriverManager;
+
+public class mysqlConfig implements config {
+	private String url;
+	private String dataSet;
+	private String ctrTable;
+	private String adsTable;
+	private static final String name = "com.mysql.jdbc.Driver";
+	private String user;
+	private String password;
+	private static mysqlConfig instance = null;
+	public Connection conn = null;
+	private mysqlConfig() throws Exception {
+		url = "jdbc:mysql://127.0.0.1/";
+		dataSet = "ads";
+		ctrTable = "ctr";
+		adsTable = "ads";
+		user = "root";
+		password = "root";
+	}
+	
+	public static config getInstance() throws Exception {
+		if (instance == null) instance = new mysqlConfig();
+		return instance;
+	}
+	
+	public String getDataSet() {
+		return dataSet;
+	}
+	
+	public String getCtrTable() {
+		return ctrTable;
+	}
+	
+	public String getAdsTable() {
+		return adsTable;
+	}
+	
+	public String getUrl() {
+		return url;
+	}
+	
+	public Connection getConnect() throws Exception {
+		if (conn == null) {
+			Class.forName(name);
+			conn = DriverManager.getConnection(url + dataSet, user, password);
+		}
+		return conn;
+	}
+	
+	public void close() {
+		if (conn != null) conn.close();
+	}
+}

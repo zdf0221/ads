@@ -8,7 +8,7 @@ import wu.leizi.config.HBConfig;
 public class moniter {
 	private HBContent HBcontent;
 	private HBServerDriver HBserver;
-	private moniterHttpApi web;
+	private moniterHttpServer web;
 	public moniter() {
 		// TODO Auto-generated constructor stub
 		
@@ -19,7 +19,7 @@ public class moniter {
 		HBserver = new HBServerDriver(HBcontent);
 		
 		// web
-		web = new moniterHttpApi(HBcontent);
+		web = new moniterHttpServer(HBcontent);
 	}
 	
 	public void start() {

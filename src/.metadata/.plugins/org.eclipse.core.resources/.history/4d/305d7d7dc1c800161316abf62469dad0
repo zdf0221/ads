@@ -1,0 +1,5 @@
+package wu.leizi.config;
+
+public interface config {
+	public static config getInstance();
+}

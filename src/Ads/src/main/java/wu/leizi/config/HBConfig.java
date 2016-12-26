@@ -14,7 +14,7 @@ public class HBConfig implements config {
 	private int ServerWebPort;
 	private static HBConfig instance = null;
 	private HBConfig() {
-		ServerWebPort = 8080;
+		ServerWebPort = 8089;
 		HeartBeatInterval = 300;
 		TimeOutInterval = 1000;
 		HeartBeatTopic = "HEARTBEAT-TOPIC";

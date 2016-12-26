@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="wu.leizi.Driver.Driver"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver"/>
 <fullyQualifiedTypeName name="scala.collection.mutable.HashTable"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
@@ -32,4 +31,15 @@
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.webThread"/>
 <fullyQualifiedTypeName name="wu.leizi.moniterContent.configContent"/>
 <fullyQualifiedTypeName name="org.apache.spark.SparkConf"/>
+<fullyQualifiedTypeName name="wu.leizi.data.Data"/>
+<fullyQualifiedTypeName name="wu.leizi.project.moniter.moniterWeb"/>
+<fullyQualifiedTypeName name="wu.leizi.Content.HBContent"/>
+<fullyQualifiedTypeName name="wu.leizi.config.HBConfig"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.heartbeat.HBServerDriver"/>
+<fullyQualifiedTypeName name="wu.leizi.project.moniter.moniter"/>
+<fullyQualifiedTypeName name="scala.util.control.Exception"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="wu.leizi.config.mysqlConfig"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
 </qualifiedTypeNameHistroy>

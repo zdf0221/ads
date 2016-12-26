@@ -1,7 +1,0 @@
-package wu.leizi.Driver;
-
-interface Driver {
-	public String DriverType();
-	public void put();
-	public void get();
-}

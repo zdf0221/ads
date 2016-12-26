@@ -1,0 +1,6 @@
+package wu.leizi.config;
+
+public class HDFSConfig implements config {
+	private String clickUrl;
+	private 
+}

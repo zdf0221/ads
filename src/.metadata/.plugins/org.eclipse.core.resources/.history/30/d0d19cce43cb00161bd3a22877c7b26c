@@ -1,0 +1,9 @@
+package wu.leizi.Driver;
+
+import java.util.HashMap;
+
+public interface Driver {
+	public void put();
+	public void get();
+	public HashMap<String, String> get(String key);
+}

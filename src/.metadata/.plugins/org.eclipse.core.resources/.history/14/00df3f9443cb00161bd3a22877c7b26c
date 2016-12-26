@@ -1,0 +1,19 @@
+package wu.leizi.Driver.offline;
+
+import wu.leizi.Driver.heartbeat.HBClientDriver;
+
+public class adsStatisDriver extends HBClientDriver {
+
+	public adsStatisDriver(String id, String content) {
+		super("adsStatis");
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	public void put() {
+		super.put();
+		
+	}
+	
+	
+}

@@ -1,0 +1,10 @@
+package wu.leizi.Driver.offline;
+
+import java.util.HashMap;
+
+import wu.leizi.Driver.Driver;
+
+public class adsStatisDriver implements Driver {
+	
+	
+}

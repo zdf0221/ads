@@ -1,0 +1,23 @@
+package wu.leizi.Driver.offline;
+
+import wu.leizi.Driver.heartbeat.HBClientDriver;
+
+public class adsStatisDriver extends HBClientDriver {
+
+	public adsStatisDriver(String id) {
+		super("AdsStaticsDriver"+id);
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	public void start() {
+    	super.put(); 
+        
+    }
+    
+    public String ServiceStatus() {
+		return super.ServiceStatus() + " HttpStatus: alive";
+	}
+	
+	
+}

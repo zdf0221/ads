@@ -14,19 +14,19 @@ public class HBContent {
 		checkList = new Hashtable<String, Boolean>();
 	}
 	
-	public String getStatus() {
+	public String getStatus() throws Exception {
 		String ret = "<h1>Result:</h1><table border='1'>"
 				+ "<tr>"
 				+ "<td> Driver ID </td>"
 				+ "<td> Status </td>"
 				+ "</tr><tr>";
-		System.out.println("==================\nResult:");
+//		System.out.println("==================\nResult:");
 		for (String ent : DriverList.keySet()) {
 			ret += "<td>"+ent + "</td><td>" + DriverList.get(ent).getStatus()+"</td>";
-			System.out.println(ent + " " + DriverList.get(ent).getStatus());
+//			System.out.println(ent + " " + DriverList.get(ent).getStatus());
 		}
 		ret += "</tr></table>";
-		System.out.println();
+//		System.out.println();
 		return ret;
 	}
 	

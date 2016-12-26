@@ -56,6 +56,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="wu.leizi.Ads"/>
 			<item value="wu.leizi.onlineCompute"/>
 			<item value="wu.leizi.moniter"/>
 		</list>
@@ -63,6 +64,7 @@
 			<item value="wu.leizi"/>
 		</list>
 		<list key="artifactId">
+			<item value="Ads"/>
 			<item value="onlineCompute"/>
 			<item value="moniter"/>
 		</list>

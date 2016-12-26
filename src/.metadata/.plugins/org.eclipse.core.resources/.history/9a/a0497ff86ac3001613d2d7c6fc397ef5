@@ -1,7 +1,0 @@
-package wu.leizi.util;
-
-import kafka.serializer.Encoder;
-
-public class JsonEncoder implements Encoder<T> {
-
-}

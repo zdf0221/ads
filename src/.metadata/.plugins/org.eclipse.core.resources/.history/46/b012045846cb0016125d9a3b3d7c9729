@@ -1,0 +1,5 @@
+package wu.leizi.config;
+
+public class HDFSConfig implements config {
+	String 
+}

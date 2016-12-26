@@ -1,0 +1,5 @@
+package wu.leizi.Service;
+
+public interface Service {
+
+}

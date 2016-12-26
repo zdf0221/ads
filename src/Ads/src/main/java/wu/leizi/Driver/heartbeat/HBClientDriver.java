@@ -1,5 +1,7 @@
 package wu.leizi.Driver.heartbeat;
 
+import java.util.HashMap;
+
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import wu.leizi.config.HBConfig;
@@ -10,10 +12,10 @@ public class HBClientDriver implements HeartBeatDriver {
 	private HeartBeatThread HBThread;
 	private String id;
 	private String content;
-	public HBClientDriver(String id, String content) {
+	public HBClientDriver(String id) {
 		producer = new Producer<String, String>(HBConfig.getInstance().ProduceConfig());
 		this.id = id;
-		this.content = content;
+		this.content = "";
 	}
 	
 	public void put() {
@@ -22,6 +24,10 @@ public class HBClientDriver implements HeartBeatDriver {
 		HBThread.start();
 	}
 
+	public void endService() {
+		HBThread.interrupt();
+	}
+	
 	public void get() {
 		// TODO Auto-generated method stub
 		
@@ -41,6 +47,12 @@ public class HBClientDriver implements HeartBeatDriver {
 	public String ServiceStatus(){
 		String ret = "HBService:" + HBThread.isAlive();
 		return ret;
+	}
+	
+	@Override
+	public HashMap<String, String> get(String key) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	class HeartBeatThread extends Thread {

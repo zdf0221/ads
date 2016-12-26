@@ -9,7 +9,7 @@ public class HBClientTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(Arrays.toString(args));
-		new HBClientDriver(args[0],"HBClient"+args[0]).put();
+		new HBClientDriver(args[0]).put();
 	}
 
 }

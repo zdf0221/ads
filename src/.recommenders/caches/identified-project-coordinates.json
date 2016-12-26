@@ -1,1 +1,1 @@
-[[{"location":"C:\\Users\\leizi\\.m2\\repository\\org\\apache\\spark\\spark-core_2.10\\1.5.2\\spark-core_2.10-1.5.2.jar","type":"JAR","hints":{}},"ABSENT"],[{"location":"C:\\Program Files\\Java\\jre1.8.0_112","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"J2SE-1.5"}},"jre:jre:1.5.0"],[{"location":"E:\\Vagrant\\src\\moniter","type":"PROJECT","hints":{"PROJECT_NAME":"moniter"}},"wu.leizi:moniter:0.0.1"],[{"location":"C:\\Users\\leizi\\.m2\\repository\\org\\apache\\spark\\spark-streaming_2.10\\1.5.2\\spark-streaming_2.10-1.5.2.jar","type":"JAR","hints":{}},"ABSENT"]]
+{}

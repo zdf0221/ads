@@ -1,0 +1,9 @@
+package wu.leizi.Driver.offline;
+
+import java.util.HashMap;
+
+
+public class adsStatisDriver implements He {
+	
+	
+}

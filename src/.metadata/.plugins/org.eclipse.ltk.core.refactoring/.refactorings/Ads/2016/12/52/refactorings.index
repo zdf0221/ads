@@ -11,3 +11,13 @@
 1482225245585	Rename type 'HBServerTest'
 1482225385400	Rename package 'wu.leizi.Demo'
 1482226520920	Rename type 'moniterWeb'
+1482463035683	Delete element
+1482463333541	Delete element
+1482463572759	Rename package 'wu.leizi.Driver.indexDriver'
+1482463580875	Rename package 'wu.leizi.Driver.offlineDriver'
+1482463593437	Rename package 'wu.leizi.Driver.onlineDriver'
+1482463661937	Delete element
+1482463671815	Delete element
+1482463822118	Rename type 'moniterHttpApi'
+1482463882480	Rename package 'wu.leizi.Driver.io'
+1482480793402	Rename package 'wu.leizi.project.offlineComput'

@@ -1,0 +1,25 @@
+package wu.leizi.Driver.model;
+
+import wu.leizi.Driver.Driver;
+
+public class adsStore implements Driver {
+
+	@Override
+	public void put() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void get() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

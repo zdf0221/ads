@@ -70,15 +70,20 @@ public class HBServerDriver implements HeartBeatDriver {
 				HBcontent.check();
 				try {
 					Thread.sleep(HBConfig.getInstance().getTimeOutInterval());
-				} catch (InterruptedException e) {
+					HBcontent.getStatus();
+				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				HBcontent.getStatus();
 			}
 		}	
 	}
 	
+	@Override
+	public HashMap<String, String> get(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	class listenThread extends Thread {
 		
