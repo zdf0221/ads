@@ -1,0 +1,30 @@
+package wu.leizi.Driver.offline;
+
+import wu.leizi.Driver.heartbeat.HBClientDriver;
+
+public class adsStatisDriver extends HBClientDriver {
+	private boolean isRunning;
+	public adsStatisDriver(String id) {
+		super("AdsStaticsDriver"+id);
+		isRunning = true;
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	public void start() {
+    	super.put(); 
+    }
+    
+	public void 
+	
+	public void close() {
+		super.endService();
+		
+	}
+	
+    public String ServiceStatus() {
+		return super.ServiceStatus() + " ads Statis Service:" + isRunning;
+	}
+	
+	
+}

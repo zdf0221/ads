@@ -20,6 +20,7 @@ public class moniter {
 		
 		// web
 		web = new moniterHttpServer(HBcontent);
+		
 	}
 	
 	public void start() {

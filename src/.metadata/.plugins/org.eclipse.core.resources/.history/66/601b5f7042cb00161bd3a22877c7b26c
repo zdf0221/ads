@@ -1,7 +1,0 @@
-package wu.leizi.Driver.offline;
-
-import wu.leizi.Driver.Driver;
-
-public class adsStatisDriver implements Driver {
-	
-}

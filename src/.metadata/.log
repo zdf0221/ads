@@ -3879,3 +3879,6 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2016-12-26 17:22:58.041
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.

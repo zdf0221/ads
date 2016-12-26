@@ -1,7 +1,0 @@
-package wu.leizi.project.moniter;
-
-public class moniter {
-	public moniter() {
-		// TODO Auto-generated constructor stub
-	}
-}

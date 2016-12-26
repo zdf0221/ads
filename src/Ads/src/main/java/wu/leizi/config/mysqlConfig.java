@@ -2,6 +2,7 @@ package wu.leizi.config;
 
 import java.sql.Connection;  
 import java.sql.DriverManager;
+import java.util.Properties;
 
 public class mysqlConfig implements config {
 	private String url;
@@ -28,7 +29,7 @@ public class mysqlConfig implements config {
 	}
 	
 	public String getDataSet() {
-		return dataSet;
+		return url + dataSet;
 	}
 	
 	public String getCtrTable() {
@@ -54,5 +55,12 @@ public class mysqlConfig implements config {
 	
 	public void close() throws Exception {
 		if (conn != null) conn.close();
+	}
+	
+	public Properties getConnProp() {
+		Properties connectionProperties = new Properties();
+		connectionProperties.put("user", user);
+		connectionProperties.put("password", password);
+		return connectionProperties;
 	}
 }
