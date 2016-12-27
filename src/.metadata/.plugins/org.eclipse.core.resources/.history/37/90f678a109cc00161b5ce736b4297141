@@ -1,0 +1,35 @@
+package wu.leizi.project.offline;
+
+import kafka.producer.KeyedMessage;
+import wu.leizi.Driver.heartbeat.HBClientDriver;
+import wu.leizi.config.HBConfig;
+import wu.leizi.data.HeartBeatData;
+
+public class offlineComput extends HBClientDriver {
+	private volatile static offlineComput instance = null;
+	
+	private adsStatisDriver staticsInfo = null;
+
+	public static offlineComput getInstance() {
+		if (instance == null) instance = new offlineComput("");
+		return instance;
+	}
+	
+	private offlineComput(String id) {
+		super("offlineComput");
+		// TODO Auto-generated constructor stub
+		staticsInfo = new adsStatisDriver("offlineComput");
+		
+	}
+	
+	class Scheduler extends Thread {
+		
+		public void run() {
+			// TODO Auto-generated method stub
+			Task();
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package wu.leizi.main;
+
+public class offlineComputTest {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new offlineComput
+	}
+}

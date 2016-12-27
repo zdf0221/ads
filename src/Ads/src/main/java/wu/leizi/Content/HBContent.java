@@ -1,16 +1,15 @@
 package wu.leizi.Content;
 
 import java.util.Hashtable;
-
-import wu.leizi.Driver.Driver;
+import wu.leizi.Driver.heartbeat.HBClientDriver;
 import wu.leizi.Driver.DriverFactory;
 import wu.leizi.data.HeartBeatData;
 
 public class HBContent {
-	private Hashtable<String, Driver> DriverList;
+	private Hashtable<String, HBClientDriver> DriverList;
 	private Hashtable<String, Boolean> checkList;
 	public HBContent() {
-		DriverList = new Hashtable<String, Driver>();
+		DriverList = new Hashtable<String, HBClientDriver>();
 		checkList = new Hashtable<String, Boolean>();
 	}
 	
@@ -19,13 +18,14 @@ public class HBContent {
 				+ "<tr>"
 				+ "<td> Driver ID </td>"
 				+ "<td> Status </td>"
-				+ "</tr><tr>";
+				+ "</tr>";
 //		System.out.println("==================\nResult:");
 		for (String ent : DriverList.keySet()) {
-			ret += "<td>"+ent + "</td><td>" + DriverList.get(ent).getStatus()+"</td>";
+			ret += "<tr><td>"+ent + "</td><td>" + DriverList.get(ent).getStatus()+"</td></tr>";
+//			System.out.println(ret);
 //			System.out.println(ent + " " + DriverList.get(ent).getStatus());
 		}
-		ret += "</tr></table>";
+		ret += "</table>";
 //		System.out.println();
 		return ret;
 	}
@@ -38,12 +38,13 @@ public class HBContent {
 	}
 	
 	public void active(HeartBeatData ent) throws Exception {
-		Driver ans = DriverList.get(ent.get("Id"));
+		HBClientDriver ans = DriverList.get(ent.get("Id"));
 		String id = (String) ent.get("Id");
 		if (ans == null){
-			ans = DriverFactory.factory(ent);
+			ans = (HBClientDriver)DriverFactory.factory(ent);
 			DriverList.put(id, ans);
 		}
+		ans.setContent(ent.get("content"));
 		checkList.put(id, true);
 	}
 }

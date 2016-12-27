@@ -6,8 +6,8 @@ public class HDFSConfig implements config {
 	private static HDFSConfig instance = null;
 	
 	private HDFSConfig() {
-		clickUrl = "hdfs://10.108.123.106:9000/offline/click/";
-		bidUrl = "hdfs://10.108.123.106:9000/offline/put/";
+		clickUrl = "hdfs://127.0.0.1:9000/offline/click/";
+		bidUrl = "hdfs://127.0.0.1:9000/offline/put/";
 	}
 	
 	public static HDFSConfig getInstance() {

@@ -1,0 +1,7 @@
+package wu.leizi.main;
+
+import ch.epfl.lamp.fjbg.Main;
+
+public class offlineComputTest {
+	
+}

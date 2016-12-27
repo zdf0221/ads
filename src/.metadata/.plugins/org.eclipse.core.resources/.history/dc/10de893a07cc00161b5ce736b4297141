@@ -1,0 +1,7 @@
+package wu.leizi.project.offline;
+
+import wu.leizi.Driver.heartbeat.HBClientDriver;
+
+public class offlineComput extends HBClientDriver {
+
+}

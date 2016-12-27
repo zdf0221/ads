@@ -1,0 +1,12 @@
+package wu.leizi.test;
+
+import wu.leizi.project.offline.adsStatisDriver;
+
+public class offlineTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new adsStatisDriver("").ctrStatis();
+	}
+
+}

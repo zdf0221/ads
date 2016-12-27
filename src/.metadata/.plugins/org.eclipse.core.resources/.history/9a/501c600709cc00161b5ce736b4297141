@@ -1,0 +1,24 @@
+package wu.leizi.project.offline;
+
+import wu.leizi.Driver.heartbeat.HBClientDriver;
+
+public class offlineComput extends HBClientDriver {
+	private volatile static offlineComput instance = null;
+	
+	private adsStatisDriver staticsInfo = null;
+
+	public static offlineComput getInstance() {
+		if (instance == null) instance = new offlineComput("");
+		return instance;
+	}
+	
+	private offlineComput(String id) {
+		super("offlineComput");
+		// TODO Auto-generated constructor stub
+		staticsInfo = new adsStatisDriver("offlineComput");
+		
+	}
+	
+	public 
+
+}

@@ -23,9 +23,14 @@ public class HBClientDriver implements HeartBeatDriver {
 		HBThread = new HeartBeatThread();
 		HBThread.start();
 	}
-
+	
+	public void setContent(String s) {
+		content = s;
+	}
+	
 	public void endService() {
-		HBThread.interrupt();
+//		HBThread.interrupt();
+		HBThread.stop();
 	}
 	
 	public void get() {

@@ -18,8 +18,8 @@ public class HBServerDriver implements HeartBeatDriver {
 	private final ConsumerConnector consumer;
 	private final ConsumerConfig config;
 	private HBContent HBcontent;
-	private CheckThread checkloop;
-	private listenThread listenloop;
+	private Thread checkloop;
+	private Thread listenloop;
 	public HBServerDriver(HBContent hb) {
 		config = HBConfig.getInstance().ConsumerConfig();
 		consumer = kafka.consumer.Consumer.createJavaConsumerConnector(config);
@@ -35,7 +35,7 @@ public class HBServerDriver implements HeartBeatDriver {
 		// TODO Auto-generated method stub
 		// check Drivers' status Loop
 		// Daemon Thread
-		checkloop = new CheckThread();
+		checkloop = new Thread(new CheckThread());
 		checkloop.start();
 //		System.out.println("check loop started.");
 //		checkloop.setDaemon(true);
@@ -45,10 +45,8 @@ public class HBServerDriver implements HeartBeatDriver {
 		// TODO Auto-generated method stub
 		// listen heart beat loop
 		// Daemon Thread
-		listenloop = new listenThread();
+		listenloop = new Thread(new listenThread());
 		listenloop.start();
-//		System.out.println("listen loop started.");
-//		listenloop.setDaemon(true);
 	}
 	
 	public String getTopic() {
@@ -62,7 +60,7 @@ public class HBServerDriver implements HeartBeatDriver {
 		return "alive";
 	}
 	
-	class CheckThread extends Thread {
+	class CheckThread implements Runnable {
 
 		public void run() {
 			// TODO Auto-generated method stub
@@ -85,7 +83,7 @@ public class HBServerDriver implements HeartBeatDriver {
 		return null;
 	}
 	
-	class listenThread extends Thread {
+	class listenThread implements Runnable {
 		
 		public void run() {
 			// TODO Auto-generated method stub
