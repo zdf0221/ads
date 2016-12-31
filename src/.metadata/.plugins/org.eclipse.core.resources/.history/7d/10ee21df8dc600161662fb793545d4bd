@@ -1,9 +1,0 @@
-package wu.leizi.data;
-
-import org.json.JSONObject;
-
-public interface Data {
-	JSONObject data;
-	public <T> void put(String key, T value);
-	public <T> T get(String key);
-}

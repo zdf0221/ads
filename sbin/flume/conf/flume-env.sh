@@ -31,4 +31,3 @@
 
 # Note that the Flume conf directory is always included in the classpath.
 #FLUME_CLASSPATH=""
-

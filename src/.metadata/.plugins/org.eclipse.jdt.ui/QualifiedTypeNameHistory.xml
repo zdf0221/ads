@@ -15,7 +15,6 @@
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.CheckThread"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBServerDriver.listenThread"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBClientDriver"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.HBClientDriver.HeartBeatThread"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="org.json.JSONArray"/>
@@ -49,4 +48,12 @@
 <fullyQualifiedTypeName name="wu.leizi.config.HDFSConfig"/>
 <fullyQualifiedTypeName name="wu.leizi.config.mysqlConfig"/>
 <fullyQualifiedTypeName name="wu.leizi.Driver.offline.adsStatisDriver"/>
+<fullyQualifiedTypeName name="wu.leizi.project.offline.offlineComput.Scheduler"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="ch.epfl.lamp.fjbg.Main"/>
+<fullyQualifiedTypeName name="wu.leizi.main.offlineComputTest"/>
+<fullyQualifiedTypeName name="wu.leizi.project.offline.offlineComput"/>
+<fullyQualifiedTypeName name="wu.leizi.Driver.heartbeat.HBClientDriver"/>
+<fullyQualifiedTypeName name="wu.leizi.project.offline.adsStatisDriver"/>
+<fullyQualifiedTypeName name="wu.leizi.project.offline.offlineBehaviorTarget"/>
 </qualifiedTypeNameHistroy>

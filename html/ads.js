@@ -1,19 +1,14 @@
 /**
  * Created by leizi on 2016/11/14.
- * 定义广告的标识符是Ads+id 此标签属性为保留字
- * cookie中判断是否有广告信息是AdsId
  */
 var AdsUrl = "http://127.0.0.1/api";
 var count  = 0;
-//document.write('<script src="//code.jquery.com/jquery-3.1.1.min.js" async></script>');
-//document.write('<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" async></script>');
 document.write('<script src="jquery-3.1.1.min.js"></script>');
 document.write('<script src="jquery.cookie.js"></script>');
 console.log("This js script is developed by wu leizi");
 var putIdArray = new Array();
 var adsIdArray = new Array();
 function isNewUser(){
-    //  判断是否为新用户
     if ($.cookie('cookieId') == null){
         return true;
     }
@@ -23,7 +18,9 @@ function isNewUser(){
 }
 function adsJsonHandler(data){
     console.log(data.AdsId);
-    $.cookie('cookieId', data.AdsId);
+    var expiresDate= new Date();
+    expiresDate.setTime(expiresDate.getTime() + (30 * 24 * 3600 * 1000));
+    $.cookie('cookieId', data.AdsId, {expires: expiresDate});
     $.each(data.AdsItem, function(key, value){
         //console.log(key+"->"+value.id);
         putIdArray[key] = value.id;
@@ -35,11 +32,23 @@ function adsJsonHandler(data){
             console.log(putId);
             eventClick(putId,adsId);
         };
+        console.log("success");
+        $.ajax({
+            timeout: 1,
+            type : "GET",
+            url : ".put.gif?cookieId=" + $.cookie('cookieId') + "&putId=" + value.id + "&type=" + value.adsId + "&adsId=" + value.adsId,
+        });
     })
+
 }
 function adsJsonHandlerError(){
     for (var i = 0; i < count; i++){
         document.getElementById("ads"+i).innerHTML = "Load failed.";
+        $.ajax({
+            timeout: 1000,
+            type : "GET",
+            url : ".failed.gif?type=test" ,
+        })
     }
 }
 function getAdsId(){
@@ -54,6 +63,7 @@ function getAdsId(){
     });
 }
 function testAdsJsonHander(data){
+    console.log(data.AdsId);
     $.each(data, function(key, value){
         //console.log(key+"->"+value.id);
         putIdArray[key] = value.id;
@@ -66,6 +76,12 @@ function testAdsJsonHander(data){
             console.log(putId);
             eventClick(putId,adsId);
         };
+        console.log("success");
+        $.ajax({
+            timeout: 1,
+            type : "GET",
+            url : ".put.gif?cookieId=" + $.cookie('cookieId') + "&putId=" + value.id + "&type=" + value.adsId + "&adsId=" + value.adsId,
+        });
     })
 }
 function getAdsJson(){
@@ -93,11 +109,13 @@ function Advertising(){
 }
 function eventClick(putId, adsId){
     $.ajax({
-        url : AdsUrl,
-        dataType : "json",
+        //url : AdsUrl,
+        //dataType : "json",
         timeout: 1000,
-        type : "POST",
-        data: JSON.stringify({"putId" : putId, "adsId" : adsId}),
+        type : "GET",
+        url : ".click.gif?cookieId=" + $.cookie('cookieId') + "&putId=" + putId + "&type=" + adsId + "&adsId=" + adsId ,
+        //type : "POST",
+        //data: JSON.stringify({"cookieId" : $.cookie('cookieId'), "putId" : putId, "type" : adsId, "adsId" : adsId}),
         success : function (){console.log("click commit");},
         error: function (){console.log("click commit failed");}
     })

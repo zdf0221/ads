@@ -1,5 +1,0 @@
-package wu.leizi.project.webApi;
-
-public class RpcClientFacade {
-
-}

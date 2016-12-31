@@ -1,0 +1,27 @@
+package wu.leizi.config;
+
+import java.util.Properties;
+
+public class kafkaConfig implements config {
+	private Properties Props;
+	private String bidUrl;
+	private static kafkaConfig instance = null;
+	
+	private kafkaConfig() {
+		clickUrl = "hdfs://127.0.0.1:9000/offline/click/";
+		bidUrl = "hdfs://127.0.0.1:9000/offline/put/";
+	}
+	
+	public static kafkaConfig getInstance() {
+		if (instance == null) instance = new kafkaConfig();
+		return instance;
+	}
+	
+	public String getClickUrl() {
+		return clickUrl;
+	}
+	
+	public String getBidUrl() {
+		return bidUrl;
+	}
+}

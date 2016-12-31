@@ -1,5 +1,0 @@
-package wu.leizi.project.moniter;
-
-public class moniterWeb extends Thread {
-
-}

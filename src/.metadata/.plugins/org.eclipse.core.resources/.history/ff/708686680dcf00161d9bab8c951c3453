@@ -1,0 +1,31 @@
+package wu.leizi.config;
+
+import java.util.Properties;
+
+public class kafkaConfig implements config {
+	private Properties flumeProps;
+	private static kafkaConfig instance = null;
+	
+	private kafkaConfig() {
+		flumeProps = new Properties();
+        //zookeeper 配置
+		flumeProps.put("zookeeper.connect", "127.0.0.1:2181");
+
+        //group 代表一个消费组
+		conProps.put("group.id", "jd-group");
+        //zk连接超时
+		conProps.put("zookeeper.session.timeout.ms", "4000");
+		conProps.put("zookeeper.sync.time.ms", "200");
+		conProps.put("auto.commit.interval.ms", "1000");
+		conProps.put("auto.offset.reset", "smallest");
+        //序列化类
+		conProps.put("serializer.class", "kafka.serializer.StringEncoder");
+	}
+	
+	public static kafkaConfig getInstance() {
+		if (instance == null) instance = new kafkaConfig();
+		return instance;
+	}
+	
+	
+}

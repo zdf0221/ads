@@ -1,0 +1,25 @@
+class HeartBeatThread extends Thread {
+		
+		public void run() {
+			// TODO Auto-generated method stub
+			Task();
+		}
+		private void Task() {
+			// TODO Auto-generated method stub
+			long no = 0;
+	        while (true) {
+	        	String key = String.valueOf(no++);
+	            HeartBeatData data = new HeartBeatData("HBClient", "HBClient-"+id);
+	            data.put("content", ServiceStatus());
+	            producer.send(new KeyedMessage<String, String>(HBConfig.getInstance().getHBTopic(), key ,data.toString()));
+//	            System.out.println(data);
+	            try {
+					Thread.sleep(HBConfig.getInstance().getHeartBeatInterval());
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	        }
+		}
+		
+	}
