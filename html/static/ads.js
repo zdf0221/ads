@@ -1,10 +1,10 @@
 /**
  * Created by leizi on 2016/11/14.
  */
-var AdsUrl = "http://127.0.0.1/api";
+var AdsUrl = "http://10.108.121.41/api";
 var count  = 0;
-document.write('<script src="jquery-3.1.1.min.js"></script>');
-document.write('<script src="jquery.cookie.js"></script>');
+document.write('<script src="static/jquery-3.1.1.min.js"></script>');
+document.write('<script src="static/jquery.cookie.js"></script>');
 console.log("This js script is developed by wu leizi");
 var putIdArray = new Array();
 var adsIdArray = new Array();
