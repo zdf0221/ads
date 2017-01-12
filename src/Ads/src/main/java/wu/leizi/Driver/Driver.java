@@ -3,6 +3,7 @@ package wu.leizi.Driver;
 import java.util.HashMap;
 
 public interface Driver {
+	public static final long serialVersionUID = 1L;
 	public void put();
 	public void get();
 	public HashMap<String, String> get(String key);

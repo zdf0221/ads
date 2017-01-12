@@ -1,0 +1,11 @@
+package wu.leizi.project.offline;
+
+import org.json.JSONObject;
+
+public class offlineReidsContent {
+	private JSONObject json;
+	private 
+	public offlineReidsContent(String cookieId) {
+		
+	}
+}

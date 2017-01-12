@@ -1,0 +1,13 @@
+package wu.leizi.project.offline;
+
+import org.json.JSONObject;
+
+import redis.clients.jedis.Jedis;
+
+public class offlineReidsContent {
+	private JSONObject json;
+	private Jedis  jedis;
+	public offlineReidsContent(String cookieId) {
+		
+	}
+}

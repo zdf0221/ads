@@ -1,35 +1,29 @@
-package wu.leizi.project.webApi;
+package wu.leizi.Driver.TrackerLog;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 
-public class offlineLog {
-	private static offlineLog instance = null;
+public class kafka2Flume {
+	private static kafka2Flume instance = null;
 	protected RpcClientFacade putClient = null;
 	protected RpcClientFacade clickClient = null;
-	private offlineLog(){
+	private kafka2Flume(){
 		putClient = new RpcClientFacade();
 		putClient.init("127.0.0.1", 44444);
 		clickClient = new RpcClientFacade();
 		clickClient.init("127.0.0.1", 44445);
 		
 	}
-	public static offlineLog getInstance(){
+	public static kafka2Flume getInstance(){
 //		System.out.println("instance");
-		if (instance == null) instance = new offlineLog();
+		if (instance == null) instance = new kafka2Flume();
 		return instance;
 	}
 	public void put(String s) throws JSONException{
-		JSONArray ans = new JSONArray(s);
-		for (int i = 0; i < ans.length(); i++){
-			System.out.println(ans.getJSONObject(i));
-//			logger.info(ans.getJSONObject(i).toString());
-//			System.out.println(ans.getJSONObject(i).toString());
-			putClient.sendDataToFlume(ans.getJSONObject(i).toString());
-		}
+//		System.out.println("[PUT]"+s);
+		putClient.sendDataToFlume(s);
 	}
 	public void click(String s){
-//		System.out.println("[DEBUG]"+s);
+//		System.out.println("[Click]"+s);
 		clickClient.sendDataToFlume(s);
 	}
 

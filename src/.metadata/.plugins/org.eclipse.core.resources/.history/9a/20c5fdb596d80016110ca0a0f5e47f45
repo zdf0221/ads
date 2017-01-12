@@ -1,0 +1,8 @@
+package wu.leizi.config;
+
+public class RedisConfig implements config {
+	private String host;
+	private RedisConfig() {
+		
+	}
+}

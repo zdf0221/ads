@@ -26,10 +26,10 @@ public class adsStatisDriver extends HBClientDriver {
     
 	public void ctrStatis() throws Exception {
 		isRunning = true;
-		SparkSession sc = sparkConfig.getInstance().getSc();
+		SparkSession sc = sparkConfig.getInstance().getSs();
 		Dataset<Row> click = sc.read().json(HDFSConfig.getInstance().getClickUrl());
 		Dataset<Row> put = sc.read().json(HDFSConfig.getInstance().getBidUrl());
-		Dataset<Row> ans = click.join(put, click.col("putId").equalTo(put.col("id")), "outer");
+		Dataset<Row> ans = click.join(put, click.col("putId").equalTo(put.col("putId")), "outer");
 		Dataset<Row> a = ans.select(put.col("adsId"), click.col("adsId")).groupBy(put.col("adsId").as("id"),click.col("adsId").as("label")).count();
 		Dataset<Row> b = ans.select(put.col("adsId"), click.col("adsId")).groupBy(put.col("adsId").as("id")).count();
 		a.createOrReplaceTempView("a");

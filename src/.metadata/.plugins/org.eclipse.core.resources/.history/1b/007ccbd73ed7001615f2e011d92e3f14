@@ -1,0 +1,11 @@
+package wu.leizi.Driver;
+
+import java.io.Serializable;
+import java.util.HashMap;
+
+public interface Driver extends Serializable {
+	public void put();
+	public void get();
+	public HashMap<String, String> get(String key);
+	public String getStatus() throws Exception;
+}

@@ -1,0 +1,10 @@
+package wu.leizi.config;
+
+import redis.clients.jedis.Jedis;
+public class RedisConfig implements config {
+	private String host;
+	private Jedis jedis;
+	private RedisConfig() {
+		
+	}
+}

@@ -13,3 +13,7 @@ export JAVA_HOME=JDK安装路径
 nginx config etc/nginx.conf
 
 ../sbin/flume/bin/flume-ng agent -c conf -f ../sbin/flume/conf/kafka.conf -n producer -Dflume.root.logger=DEBUG,console
+
+web.py
+redis
+redis-py

@@ -1588,3 +1588,1061 @@ java.net.ConnectException: Connection refused
 [ WARN ]  2016-12-31 06:39:34 [Logging.scala:83]  Property serializer.class is not valid
 [ WARN ]  2016-12-31 07:05:37 [Logging.scala:83]  Property serializer.class is not valid
 [ WARN ]  2016-12-31 07:12:45 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:01:05 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-05 08:01:07 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-05 08:01:08 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-05 08:01:08 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-05 08:01:23 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerStageCompleted(org.apache.spark.scheduler.StageInfo@1b30872)
+[ ERROR ]  2017-01-05 08:01:23 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerSQLExecutionEnd(1,1483603283976)
+[ ERROR ]  2017-01-05 08:01:24 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerJobEnd(13,1483603284122,JobFailed(org.apache.spark.SparkException: Job 13 cancelled because SparkContext was shut down))
+[ ERROR ]  2017-01-05 08:01:24 [Logging.scala:91]  Exception in statusUpdate
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.scheduler.TaskResultGetter$$anon$3@221c3cad rejected from java.util.concurrent.ThreadPoolExecutor@764c6223[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 835]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.scheduler.TaskResultGetter.enqueueSuccessfulTask(TaskResultGetter.scala:61)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.liftedTree2$1(TaskSchedulerImpl.scala:372)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.statusUpdate(TaskSchedulerImpl.scala:353)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:67)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ ERROR ]  2017-01-05 08:01:24 [Logging.scala:91]  Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@465eb6c3 rejected from java.util.concurrent.ThreadPoolExecutor@21fa42ed[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 836]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:147)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:87)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:85)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:85)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:70)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-05 08:02:43 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-05 08:02:43 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-05 08:02:43 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-05 08:02:43 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-05 08:06:59 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:06:59 [Logging.scala:83]  No broker partitions consumed by consumer thread jd-group_vagrant-ubuntu-trusty-1483603619490-12300f81-0 for topic LOG-TRACKER-TOPIC
+[ WARN ]  2017-01-05 08:09:39 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:09:40 [Logging.scala:83]  No broker partitions consumed by consumer thread jd-group_vagrant-ubuntu-trusty-1483603779712-4084b1c3-0 for topic LOG-TRACKER-TOPIC
+[ WARN ]  2017-01-05 08:15:58 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:15:59 [Logging.scala:83]  No broker partitions consumed by consumer thread jd-group_vagrant-ubuntu-trusty-1483604158773-ba056fb8-0 for topic LOG-TRACKER-TOPIC
+[ WARN ]  2017-01-05 08:23:23 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:23:24 [Logging.scala:83]  No broker partitions consumed by consumer thread jd-group_vagrant-ubuntu-trusty-1483604603931-783aa425-0 for topic LOG-TRACKER-TOPIC
+[ WARN ]  2017-01-05 08:27:56 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:28:20 [Logging.scala:83]  Error while fetching metadata [{TopicMetadata for topic HEARTBEAT-TOPIC -> 
+No partition metadata for topic HEARTBEAT-TOPIC due to kafka.common.LeaderNotAvailableException}] for topic [HEARTBEAT-TOPIC]: class kafka.common.LeaderNotAvailableException 
+[ WARN ]  2017-01-05 08:43:51 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-05 08:43:52 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-05 08:43:52 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-05 08:43:52 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-05 08:43:54 [Logging.scala:66]  Error while looking for metadata directory.
+[ WARN ]  2017-01-05 08:47:22 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-05 08:47:22 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-05 08:47:23 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-05 08:47:23 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-05 08:48:23 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerSQLExecutionEnd(10,1483606103523)
+[ ERROR ]  2017-01-05 08:48:23 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerStageCompleted(org.apache.spark.scheduler.StageInfo@74005cf4)
+[ ERROR ]  2017-01-05 08:48:23 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerJobEnd(61,1483606103555,JobFailed(org.apache.spark.SparkException: Job 61 cancelled because SparkContext was shut down))
+[ ERROR ]  2017-01-05 08:48:23 [Logging.scala:91]  Exception in statusUpdate
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.scheduler.TaskResultGetter$$anon$3@7a93d962 rejected from java.util.concurrent.ThreadPoolExecutor@75cba352[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3306]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.scheduler.TaskResultGetter.enqueueSuccessfulTask(TaskResultGetter.scala:61)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.liftedTree2$1(TaskSchedulerImpl.scala:372)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.statusUpdate(TaskSchedulerImpl.scala:353)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:67)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ ERROR ]  2017-01-05 08:48:23 [Logging.scala:91]  Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@3fe84e2c rejected from java.util.concurrent.ThreadPoolExecutor@936dca9[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3307]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:147)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:87)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:85)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:85)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:70)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-05 08:49:06 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:49:07 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:49:07 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 08:49:07 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:49:07 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 08:52:18 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:52:19 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:52:19 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 08:52:19 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:52:19 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 08:53:48 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:53:49 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:53:49 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 08:53:49 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:53:49 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 08:56:10 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 08:56:11 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:56:11 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 08:56:11 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 08:56:11 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 09:01:22 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 09:01:23 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 09:01:23 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 09:01:23 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 09:01:23 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 09:05:29 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 09:05:30 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 09:05:30 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 09:05:30 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-05 09:05:30 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-05 09:06:58 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-05 09:06:58 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-05 09:06:58 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-05 09:06:58 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-05 09:12:11 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-05 09:12:12 [Logging.scala:83]  No broker partitions consumed by consumer thread jd-group_vagrant-ubuntu-trusty-1483607531741-afbdf6c4-0 for topic LOG-TRACKER-TOPIC
+[ WARN ]  2017-01-05 09:12:46 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-05 09:12:46 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-05 09:12:47 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-05 09:12:47 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-05 09:15:06 [Logging.scala:91]  Exception in task 0.0 in stage 218.0 (TID 7432)
+java.io.FileNotFoundException: File does not exist: /offline/click/FlumeData.1483607588631.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:231)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:225)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-05 09:15:06 [Logging.scala:66]  Lost task 0.0 in stage 218.0 (TID 7432, localhost, executor driver): java.io.FileNotFoundException: File does not exist: /offline/click/FlumeData.1483607588631.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:231)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:225)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[ ERROR ]  2017-01-05 09:15:06 [Logging.scala:70]  Task 0 in stage 218.0 failed 1 times; aborting job
+[ ERROR ]  2017-01-05 09:16:45 [Logging.scala:91]  Exception in task 0.0 in stage 382.0 (TID 12827)
+java.io.FileNotFoundException: File does not exist: /offline/put/FlumeData.1483607742064.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.agg_doAggregateWithKeys$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:126)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-05 09:16:45 [Logging.scala:66]  Lost task 0.0 in stage 382.0 (TID 12827, localhost, executor driver): java.io.FileNotFoundException: File does not exist: /offline/put/FlumeData.1483607742064.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.agg_doAggregateWithKeys$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:126)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[ ERROR ]  2017-01-05 09:16:45 [Logging.scala:70]  Task 0 in stage 382.0 failed 1 times; aborting job
+[ WARN ]  2017-01-05 09:31:05 [Logging.scala:83]  No broker partitions consumed by consumer thread jd-group_vagrant-ubuntu-trusty-1483607531741-afbdf6c4-0 for topic LOG-TRACKER-TOPIC
+[ WARN ]  2017-01-10 09:27:54 [Logging.scala:89]  Fetching topic metadata with correlation id 0 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$1.apply$mcV$sp(DefaultEventHandler.scala:67)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:67)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:54 [Logging.scala:106]  fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:72)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$1.apply$mcV$sp(DefaultEventHandler.scala:67)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:67)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	... 10 more
+[ WARN ]  2017-01-10 09:27:54 [Logging.scala:89]  Fetching topic metadata with correlation id 1 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:186)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:150)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:149)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:149)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:95)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:72)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:54 [Logging.scala:97]  Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+[ WARN ]  2017-01-10 09:27:55 [Logging.scala:89]  Fetching topic metadata with correlation id 2 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:106]  fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:72)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	... 10 more
+[ WARN ]  2017-01-10 09:27:55 [Logging.scala:89]  Fetching topic metadata with correlation id 3 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:186)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:150)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:149)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:149)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:95)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:72)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:97]  Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+[ WARN ]  2017-01-10 09:27:55 [Logging.scala:89]  Fetching topic metadata with correlation id 4 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:106]  fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:72)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	... 10 more
+[ WARN ]  2017-01-10 09:27:55 [Logging.scala:89]  Fetching topic metadata with correlation id 5 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:186)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:150)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:149)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:149)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:95)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:72)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:97]  Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+[ WARN ]  2017-01-10 09:27:55 [Logging.scala:89]  Fetching topic metadata with correlation id 6 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:106]  fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:72)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	... 10 more
+[ WARN ]  2017-01-10 09:27:55 [Logging.scala:89]  Fetching topic metadata with correlation id 7 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:186)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:150)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:149)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:149)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:95)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:72)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:97]  Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+[ WARN ]  2017-01-10 09:27:55 [Logging.scala:89]  Fetching topic metadata with correlation id 8 for topics [Set(HEARTBEAT-TOPIC)] from broker [id:0,host:127.0.0.1,port:9092] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:106]  fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(HEARTBEAT-TOPIC)] from broker [ArrayBuffer(id:0,host:127.0.0.1,port:9092)] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:72)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:78)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.Utils$.swallowError(Utils.scala:45)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:78)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.Task(HBClientDriver.java:76)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver$HeartBeatThread.run(HBClientDriver.java:67)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+	... 10 more
+[ ERROR ]  2017-01-10 09:27:55 [Logging.scala:97]  Failed to send requests for topics HEARTBEAT-TOPIC with correlation ids in [0,8]
+[ WARN ]  2017-01-10 09:31:47 [Logging.scala:83]  Error while fetching metadata [{TopicMetadata for topic HEARTBEAT-TOPIC -> 
+No partition metadata for topic HEARTBEAT-TOPIC due to kafka.common.LeaderNotAvailableException}] for topic [HEARTBEAT-TOPIC]: class kafka.common.LeaderNotAvailableException 
+[ WARN ]  2017-01-10 09:31:57 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 09:31:57 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 09:31:57 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 09:31:57 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-10 09:34:50 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerStageCompleted(org.apache.spark.scheduler.StageInfo@29ec8ff9)
+[ ERROR ]  2017-01-10 09:34:50 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerSQLExecutionEnd(34,1484040890926)
+[ ERROR ]  2017-01-10 09:34:50 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerJobEnd(189,1484040890932,JobFailed(org.apache.spark.SparkException: Job 189 cancelled because SparkContext was shut down))
+[ ERROR ]  2017-01-10 09:34:50 [Logging.scala:91]  Exception in statusUpdate
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.scheduler.TaskResultGetter$$anon$3@a9f59b8 rejected from java.util.concurrent.ThreadPoolExecutor@44d797e7[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9814]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.scheduler.TaskResultGetter.enqueueSuccessfulTask(TaskResultGetter.scala:61)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.liftedTree2$1(TaskSchedulerImpl.scala:372)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.statusUpdate(TaskSchedulerImpl.scala:353)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:67)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ ERROR ]  2017-01-10 09:34:50 [Logging.scala:91]  Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@4c939f0e rejected from java.util.concurrent.ThreadPoolExecutor@7ee751fa[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9815]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:147)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:87)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:85)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:85)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:70)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-10 10:49:32 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 10:49:33 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 10:49:33 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 10:49:33 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:17:55 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:17:56 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:17:56 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:17:56 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:21:12 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:21:12 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:21:12 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:21:12 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:22:11 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:22:11 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:22:11 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:22:11 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:26:29 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:26:29 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:26:30 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:26:30 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:28:54 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:28:56 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:28:56 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:28:56 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:32:48 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:32:49 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:32:49 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:32:49 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:33:30 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:33:30 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:33:31 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:33:31 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 11:35:46 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 11:35:46 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 11:35:47 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 11:35:47 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 13:12:31 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 13:12:32 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 13:12:32 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 13:12:32 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 13:13:12 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 13:13:13 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 13:13:13 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 13:13:13 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 13:35:03 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 13:35:05 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 13:35:05 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 13:35:05 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 13:50:38 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 13:50:38 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 13:50:39 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 13:50:39 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 14:00:36 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:00:36 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:00:36 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:00:36 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 14:00:51 [Logging.scala:89]  Failed to send producer request with correlation id 102 to broker 0 with data for partitions [HEARTBEAT-TOPIC,0]
+java.lang.ThreadDeath
+	at java.lang.Thread.stop(Thread.java:850)
+	at wu.leizi.Driver.HeartBeat.HBClientDriver.close(HBClientDriver.java:33)
+	at wu.leizi.project.offline.offlineComput$Scheduler.run(offlineComput.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-10 14:04:47 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:04:47 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:04:47 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:04:47 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-10 14:05:02 [Logging.scala:91]  Exception in task 0.0 in stage 22.0 (TID 825)
+org.json.JSONException: JSONObject["cookieId "] not found.
+	at org.json.JSONObject.get(JSONObject.java:471)
+	at org.json.JSONObject.getString(JSONObject.java:717)
+	at wu.leizi.project.offline.MyJson.getString(offlineBehaviorTarget.java:70)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:39)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:1)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:191)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:63)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-10 14:05:02 [Logging.scala:66]  Lost task 0.0 in stage 22.0 (TID 825, localhost, executor driver): org.json.JSONException: JSONObject["cookieId "] not found.
+	at org.json.JSONObject.get(JSONObject.java:471)
+	at org.json.JSONObject.getString(JSONObject.java:717)
+	at wu.leizi.project.offline.MyJson.getString(offlineBehaviorTarget.java:70)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:39)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:1)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:191)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:63)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[ ERROR ]  2017-01-10 14:05:02 [Logging.scala:70]  Task 0 in stage 22.0 failed 1 times; aborting job
+[ WARN ]  2017-01-10 14:07:42 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:07:42 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:07:42 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:07:42 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-10 14:07:57 [Logging.scala:91]  Exception in task 0.0 in stage 22.0 (TID 825)
+org.json.JSONException: JSONObject["cookieId "] not found.
+	at org.json.JSONObject.get(JSONObject.java:471)
+	at org.json.JSONObject.getString(JSONObject.java:717)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:40)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:1)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:191)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:63)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-10 14:07:57 [Logging.scala:66]  Lost task 0.0 in stage 22.0 (TID 825, localhost, executor driver): org.json.JSONException: JSONObject["cookieId "] not found.
+	at org.json.JSONObject.get(JSONObject.java:471)
+	at org.json.JSONObject.getString(JSONObject.java:717)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:40)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:1)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:191)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:63)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[ ERROR ]  2017-01-10 14:07:57 [Logging.scala:70]  Task 0 in stage 22.0 failed 1 times; aborting job
+[ WARN ]  2017-01-10 22:08:55 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-10 22:08:57 [ClientCnxn.java:1102]  Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+[ WARN ]  2017-01-10 22:08:59 [ClientCnxn.java:1102]  Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+[ WARN ]  2017-01-10 14:09:25 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:09:25 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:09:25 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:09:25 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 14:14:33 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:14:33 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:14:33 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:14:33 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 14:17:23 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:17:23 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:17:24 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:17:24 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-10 14:17:37 [Logging.scala:91]  Exception in task 0.0 in stage 22.0 (TID 825)
+org.json.JSONException: JSONObject["cookieId "] not found.
+	at org.json.JSONObject.get(JSONObject.java:471)
+	at org.json.JSONObject.getString(JSONObject.java:717)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:39)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:1)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:191)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:63)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-10 14:17:37 [Logging.scala:66]  Lost task 0.0 in stage 22.0 (TID 825, localhost, executor driver): org.json.JSONException: JSONObject["cookieId "] not found.
+	at org.json.JSONObject.get(JSONObject.java:471)
+	at org.json.JSONObject.getString(JSONObject.java:717)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:39)
+	at wu.leizi.project.offline.offlineBehaviorTarget$1.call(offlineBehaviorTarget.java:1)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at org.apache.spark.api.java.JavaRDDLike$$anonfun$fn$1$1.apply(JavaRDDLike.scala:125)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.util.collection.ExternalSorter.insertAll(ExternalSorter.scala:191)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:63)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[ ERROR ]  2017-01-10 14:17:37 [Logging.scala:70]  Task 0 in stage 22.0 failed 1 times; aborting job
+[ WARN ]  2017-01-10 22:18:11 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-10 22:18:12 [ClientCnxn.java:1102]  Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+[ WARN ]  2017-01-10 22:18:14 [ClientCnxn.java:1102]  Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+[ WARN ]  2017-01-10 14:18:44 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:18:45 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:18:45 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:18:45 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 14:19:45 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:19:45 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:19:45 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:19:45 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ WARN ]  2017-01-10 14:22:22 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-10 14:22:24 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-10 14:22:24 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-10 14:22:26 [NettyAvroRpcClient.java:504]  Invalid value for batchSize: 0; Using default value.
+[ WARN ]  2017-01-10 14:22:26 [NettyAvroRpcClient.java:634]  Using default maxIOWorkers
+[ WARN ]  2017-01-10 14:24:04 [Logging.scala:83]  Property serializer.class is not valid
+[ WARN ]  2017-01-10 14:24:05 [Logging.scala:83]  No broker partitions consumed by consumer thread jd-group_vagrant-ubuntu-trusty-1484058244917-ad746419-0 for topic LOG-TRACKER-TOPIC
+[ WARN ]  2017-01-10 14:24:38 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-10 14:24:39 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-10 14:24:39 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-10 14:24:39 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-10 14:25:01 [Logging.scala:91]  Exception in task 0.0 in stage 17.0 (TID 411)
+java.io.FileNotFoundException: File does not exist: /offline/put/FlumeData.1484058251695.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:231)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:225)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-10 14:25:01 [Logging.scala:66]  Lost task 0.0 in stage 17.0 (TID 411, localhost, executor driver): java.io.FileNotFoundException: File does not exist: /offline/put/FlumeData.1484058251695.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:231)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:225)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$25.apply(RDD.scala:826)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[ ERROR ]  2017-01-10 14:25:01 [Logging.scala:70]  Task 0 in stage 17.0 failed 1 times; aborting job
+[ ERROR ]  2017-01-10 14:25:01 [Logging.scala:91]  Exception in task 0.0 in stage 18.0 (TID 412)
+java.io.FileNotFoundException: File does not exist: /offline/put/FlumeData.1484058251695.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.agg_doAggregateWithKeys$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:126)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ WARN ]  2017-01-10 14:25:01 [Logging.scala:66]  Lost task 0.0 in stage 18.0 (TID 412, localhost, executor driver): java.io.FileNotFoundException: File does not exist: /offline/put/FlumeData.1484058251695.tmp
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:71)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:61)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:1828)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1799)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1712)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:587)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:365)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:969)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:157)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:102)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.agg_doAggregateWithKeys$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIterator.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$8$$anon$1.hasNext(WholeStageCodegenExec.scala:377)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:126)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:96)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:53)
+	at org.apache.spark.scheduler.Task.run(Task.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:282)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[ ERROR ]  2017-01-10 14:25:01 [Logging.scala:70]  Task 0 in stage 18.0 failed 1 times; aborting job
+[ WARN ]  2017-01-12 08:10:54 [Logging.scala:83]  Error while fetching metadata [{TopicMetadata for topic HEARTBEAT-TOPIC -> 
+No partition metadata for topic HEARTBEAT-TOPIC due to kafka.common.LeaderNotAvailableException}] for topic [HEARTBEAT-TOPIC]: class kafka.common.LeaderNotAvailableException 
+[ WARN ]  2017-01-12 08:11:04 [Logging.scala:66]  Support for Scala 2.10 is deprecated as of Spark 2.1.0
+[ WARN ]  2017-01-12 08:11:04 [NativeCodeLoader.java:62]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[ WARN ]  2017-01-12 08:11:04 [Logging.scala:66]  Your hostname, vagrant-ubuntu-trusty resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface eth0)
+[ WARN ]  2017-01-12 08:11:04 [Logging.scala:66]  Set SPARK_LOCAL_IP if you need to bind to another address
+[ ERROR ]  2017-01-12 08:15:50 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerTaskStart(485,0,org.apache.spark.scheduler.TaskInfo@ff39bc2)
+[ ERROR ]  2017-01-12 08:15:50 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerSQLExecutionEnd(40,1484208950390)
+[ ERROR ]  2017-01-12 08:15:50 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerStageCompleted(org.apache.spark.scheduler.StageInfo@391f93a9)
+[ ERROR ]  2017-01-12 08:15:50 [Logging.scala:70]  SparkListenerBus has already stopped! Dropping event SparkListenerJobEnd(304,1484208950398,JobFailed(org.apache.spark.SparkException: Job 304 cancelled because SparkContext was shut down))
+[ ERROR ]  2017-01-12 08:15:50 [Logging.scala:91]  Exception in statusUpdate
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.scheduler.TaskResultGetter$$anon$3@1defc972 rejected from java.util.concurrent.ThreadPoolExecutor@1582cecb[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 16552]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.scheduler.TaskResultGetter.enqueueSuccessfulTask(TaskResultGetter.scala:61)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.liftedTree2$1(TaskSchedulerImpl.scala:372)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.statusUpdate(TaskSchedulerImpl.scala:353)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:67)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ ERROR ]  2017-01-12 08:15:50 [Logging.scala:91]  Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@34cc3780 rejected from java.util.concurrent.ThreadPoolExecutor@5ee773a1[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 16553]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:147)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:87)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$reviveOffers$1.apply(LocalSchedulerBackend.scala:85)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:85)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:70)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

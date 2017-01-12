@@ -1,8 +1,0 @@
-package wu.leizi.test;
-
-
-public class KafkaConsumer {
-    public static void main(String[] args) {
-        new KafkaConsumer().consume();
-    }
-}

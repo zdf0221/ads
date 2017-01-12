@@ -66,8 +66,9 @@
 		<item value="3" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
 			<item value="E:\Vagrant\share\offlineComputTest.jar"/>
-			<item value="E:\Vagrant\share\moniter.jar"/>
+			<item value="E:\Vagrant\share\offlineLog.jar"/>
 			<item value="E:\Vagrant\share\webapi.jar"/>
+			<item value="E:\Vagrant\share\moniter.jar"/>
 			<item value="E:\Vagrant\share\streamingkafka.jar"/>
 			<item value="E:\Vagrant\share\HBServer.jar"/>
 			<item value="E:\Vagrant\share\HBClient.jar"/>

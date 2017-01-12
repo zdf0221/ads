@@ -1,5 +1,7 @@
 package wu.leizi.config;
 
+import org.apache.spark.SparkContext;
+import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SparkSession;
 
 public class sparkConfig implements config {
@@ -24,9 +26,8 @@ public class sparkConfig implements config {
 		return master;
 	}
 	
-	public SparkSession getSc() {
+	public SparkSession getSs() {
 		return ss;
 	}
-	
 	
 }

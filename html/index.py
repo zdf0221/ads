@@ -1,8 +1,11 @@
 #!/usr/bin/python
+import traceback
 import web
 import json
 import os
 import time
+import util
+
 urls = (
     "/", "index",
     "/api", "api",
@@ -26,15 +29,15 @@ class api:
                 putIdAns = "%013d%04d" %(time.time() * 1000, os.getpid())
                 content = []
                 for i in xrange(req["size"]):
-                    ans = {}
-                    ans['content'] = "baidu"
-                    ans['url'] = "http://www.baidu.com"
+                    ans = util.getAdsCandidate()
                     ans['adsId'] = i
                     ans['id'] = "%s%03d" %(putIdAns, i)
                     content.append(ans)
                 if "cookieId" in req:
+                    util.IsMissingCookie(req['cookieId'])
                     return json.dumps(content)
                 else:
+                    util.setNewCookie(putIdAns)
                     ret = {}
                     ret['AdsId'] = putIdAns
                     ret['AdsItem'] = content
@@ -42,7 +45,7 @@ class api:
             else:
                 internalerror()
         except Exception, e:
-            print e
+            traceback.print_exc()
 
     def GET(self):
         ret = {"title" : "readme", "content" : "This is a web api."}

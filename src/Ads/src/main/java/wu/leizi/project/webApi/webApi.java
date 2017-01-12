@@ -16,6 +16,7 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 import wu.leizi.Driver.HeartBeat.HBClientDriver;
+import wu.leizi.Driver.TrackerLog.kafka2Flume;
 
 import org.json.*;  
 public class webApi extends HBClientDriver { 
@@ -73,7 +74,7 @@ class MyHandler implements HttpHandler {
 	            json.put("AdsId", AdsId);
 	            json.put("AdsItem", jsonMembers);
 	            responseBody.write(json.toString().getBytes());
-	            offlineLog.getInstance().put(json.toString());
+//	            offlineLog.getInstance().put(json.toString());
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -112,13 +113,13 @@ class MyHandler implements HttpHandler {
         	            responseBody.write(json.toString().getBytes());
             		}
             		System.out.println("a");
-    	            offlineLog.getInstance().put(jsonMembers.toString());
+//    	            offlineLog.getInstance().put(jsonMembers.toString());
             	}
             	if (jsonDate.has("putId")){
             		JSONObject json = new JSONObject();
             		json.put("Status", "Success");
             		responseBody.write(json.toString().getBytes());
-            		offlineLog.getInstance().click(jsonDate.toString());
+//            		offlineLog.getInstance().click(jsonDate.toString());
             	}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

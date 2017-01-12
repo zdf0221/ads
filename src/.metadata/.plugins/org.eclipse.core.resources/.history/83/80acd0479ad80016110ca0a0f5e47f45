@@ -1,0 +1,44 @@
+package wu.leizi.project.offline;
+
+import org.json.JSONObject;
+
+
+import redis.clients.jedis.Jedis;
+import wu.leizi.config.RedisConfig;
+
+public class offlineReidsContent {
+	private JSONObject json;
+	private Jedis  jedis;
+	private boolean timeout;
+	private String key;
+	public offlineReidsContent(String cookieId) {
+		jedis = RedisConfig.getInstance().getJedis();
+		key = "CookieId" + cookieId;
+		if (jedis.exists(key)) {
+			json = new JSONObject(jedis.get(key));
+			timeout = false;
+		}
+		else {
+			timeout = true;
+		}
+	}
+	
+	public String getKey() {
+		return key;
+	}
+	public void save() {
+		JSONObject counter = json.getJSONObject("counter");
+		String tag = null;
+		long maximal = -1;
+		for (String s : counter.keySet()) {
+			long ans = counter.getLong(s);
+			if (maximal < ans) {
+				tag = s;
+				maximal = ans;
+			}
+		}
+		if (tag != null) {
+			
+		}
+	}
+}

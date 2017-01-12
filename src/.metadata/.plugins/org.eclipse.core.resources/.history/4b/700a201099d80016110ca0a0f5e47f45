@@ -1,0 +1,30 @@
+package wu.leizi.project.offline;
+
+import org.json.JSONObject;
+
+
+import redis.clients.jedis.Jedis;
+import wu.leizi.config.RedisConfig;
+
+public class offlineReidsContent {
+	private JSONObject json;
+	private Jedis  jedis;
+	private boolean timeout;
+	private String key;
+	public offlineReidsContent(String cookieId) {
+		jedis = RedisConfig.getInstance().getJedis();
+		key = "CookieId" + cookieId;
+		if (jedis.exists(key)) {
+			json = new JSONObject(jedis.get(key));
+			timeout = false;
+		}
+		else {
+			timeout = true;
+		}
+	}
+	
+	public String getKey() {
+		
+	}
+	public void 
+}

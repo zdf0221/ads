@@ -1,5 +1,0 @@
-package wu.leizi.Driver.TrackerLog;
-
-public class Flume2KafkaDriver {
-
-}

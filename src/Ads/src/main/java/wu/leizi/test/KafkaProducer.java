@@ -10,8 +10,8 @@ import kafka.producer.ProducerConfig;
  * Hello world!
  *
  */
-public class KafkaProducer 
-{
+public class KafkaProducer {
+	
     private final Producer<String, String> producer;
     public final static String TOPIC = "TEST-TOPIC";
 
@@ -47,8 +47,7 @@ public class KafkaProducer
         }
     }
 
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
         new KafkaProducer().produce();
     }
 }

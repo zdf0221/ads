@@ -1,0 +1,25 @@
+package wu.leizi.project.webApi;
+
+public class mqCallBack implements callback, Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String retJSONStr() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
+
+interface callback {
+	public String retJSONStr();
+}
+
+class remoteInstance  {
+	public void 
+}

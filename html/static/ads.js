@@ -1,7 +1,7 @@
 /**
  * Created by leizi on 2016/11/14.
  */
-var AdsUrl = "http://10.108.121.41/api";
+var AdsUrl = "/api";
 var count  = 0;
 document.write('<script src="static/jquery-3.1.1.min.js"></script>');
 document.write('<script src="static/jquery.cookie.js"></script>');

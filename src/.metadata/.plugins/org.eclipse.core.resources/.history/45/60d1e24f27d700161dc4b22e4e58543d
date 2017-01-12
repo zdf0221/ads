@@ -1,0 +1,34 @@
+package wu.leizi.config;
+
+import org.apache.spark.sql.SparkSession;
+
+public class sparkConfig implements config {
+	private static sparkConfig instance;
+	private SparkSession ss = null;
+	public String master = null;
+	public JavaSparkContext sc = null;
+	public static sparkConfig getInstance() {
+		if (instance == null) instance = new sparkConfig();
+		return instance;
+	}
+	
+	private sparkConfig() {
+		master = "local";
+		ss = SparkSession
+				.builder()
+				.appName("SparkOIDriver")
+				.master(master)
+				.getOrCreate();
+	}
+	
+	public String getMaster() {
+		return master;
+	}
+	
+	public SparkSession getSs() {
+		return ss;
+	}
+
+	
+	
+}

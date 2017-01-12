@@ -1,4 +1,5 @@
-[2016-12-31 07:04:36,272] INFO KafkaConfig values: 
+[2017-01-09 08:03:03,870] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 09:28:43,942] INFO KafkaConfig values: 
 	advertised.host.name = null
 	advertised.listeners = null
 	advertised.port = null
@@ -137,38 +138,147 @@
 	zookeeper.set.acl = false
 	zookeeper.sync.time.ms = 2000
  (kafka.server.KafkaConfig)
-[2016-12-31 07:04:36,366] INFO starting (kafka.server.KafkaServer)
-[2016-12-31 07:04:36,392] INFO [ThrottledRequestReaper-Fetch], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
-[2016-12-31 07:04:36,395] INFO [ThrottledRequestReaper-Produce], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
-[2016-12-31 07:04:36,406] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
-[2016-12-31 07:04:42,813] FATAL Fatal error during KafkaServer startup. Prepare to shutdown (kafka.server.KafkaServer)
-org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 6000
-	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:1232)
-	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:156)
-	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:130)
-	at kafka.utils.ZkUtils$.createZkClientAndConnection(ZkUtils.scala:76)
-	at kafka.utils.ZkUtils$.apply(ZkUtils.scala:58)
-	at kafka.server.KafkaServer.initZk(KafkaServer.scala:327)
-	at kafka.server.KafkaServer.startup(KafkaServer.scala:200)
-	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:39)
-	at kafka.Kafka$.main(Kafka.scala:67)
-	at kafka.Kafka.main(Kafka.scala)
-[2016-12-31 07:04:42,816] INFO shutting down (kafka.server.KafkaServer)
-[2016-12-31 07:04:42,826] INFO shut down completed (kafka.server.KafkaServer)
-[2016-12-31 07:04:42,829] FATAL Fatal error during KafkaServerStartable startup. Prepare to shutdown (kafka.server.KafkaServerStartable)
-org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 6000
-	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:1232)
-	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:156)
-	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:130)
-	at kafka.utils.ZkUtils$.createZkClientAndConnection(ZkUtils.scala:76)
-	at kafka.utils.ZkUtils$.apply(ZkUtils.scala:58)
-	at kafka.server.KafkaServer.initZk(KafkaServer.scala:327)
-	at kafka.server.KafkaServer.startup(KafkaServer.scala:200)
-	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:39)
-	at kafka.Kafka$.main(Kafka.scala:67)
-	at kafka.Kafka.main(Kafka.scala)
-[2016-12-31 07:04:42,833] INFO shutting down (kafka.server.KafkaServer)
-[2016-12-31 07:04:58,801] INFO KafkaConfig values: 
+[2017-01-10 09:28:44,467] INFO starting (kafka.server.KafkaServer)
+[2017-01-10 09:28:44,599] INFO [ThrottledRequestReaper-Fetch], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2017-01-10 09:28:44,601] INFO [ThrottledRequestReaper-Produce], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2017-01-10 09:28:44,627] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2017-01-10 09:28:46,256] INFO Cluster ID = pcPJGIKZRR2uGIzGKdxOog (kafka.server.KafkaServer)
+[2017-01-10 09:28:46,407] INFO Log directory '/tmp/kafka-logs' not found, creating it. (kafka.log.LogManager)
+[2017-01-10 09:28:46,454] INFO Loading logs. (kafka.log.LogManager)
+[2017-01-10 09:28:46,483] INFO Logs loading complete in 29 ms. (kafka.log.LogManager)
+[2017-01-10 09:28:46,561] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+[2017-01-10 09:28:46,566] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+[2017-01-10 09:28:46,625] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+[2017-01-10 09:28:46,748] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
+[2017-01-10 09:28:46,757] INFO [Socket Server on Broker 0], Started 1 acceptor threads (kafka.network.SocketServer)
+[2017-01-10 09:28:46,862] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-10 09:28:46,863] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-10 09:28:46,995] INFO Creating /controller (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
+[2017-01-10 09:28:47,010] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
+[2017-01-10 09:28:47,012] INFO 0 successfully elected as leader (kafka.server.ZookeeperLeaderElector)
+[2017-01-10 09:28:47,273] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-10 09:28:47,279] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-10 09:28:47,282] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-10 09:28:47,304] INFO [GroupCoordinator 0]: Starting up. (kafka.coordinator.GroupCoordinator)
+[2017-01-10 09:28:47,306] INFO [GroupCoordinator 0]: Startup complete. (kafka.coordinator.GroupCoordinator)
+[2017-01-10 09:28:47,314] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 8 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 09:28:47,482] INFO Will not load MX4J, mx4j-tools.jar is not in the classpath (kafka.utils.Mx4jLoader$)
+[2017-01-10 09:28:47,562] INFO Creating /brokers/ids/0 (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
+[2017-01-10 09:28:47,568] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
+[2017-01-10 09:28:47,571] INFO Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT -> EndPoint(vagrant-ubuntu-trusty.vagrantup.com,9092,PLAINTEXT) (kafka.utils.ZkUtils)
+[2017-01-10 09:28:47,575] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+[2017-01-10 09:28:47,643] INFO New leader is 0 (kafka.server.ZookeeperLeaderElector$LeaderChangeListener)
+[2017-01-10 09:28:47,648] INFO [Kafka Server 0], started (kafka.server.KafkaServer)
+[2017-01-10 09:28:47,745] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
+[2017-01-10 09:28:47,750] INFO [KafkaApi-0] Auto creation of topic LOG-TRACKER-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
+[2017-01-10 09:28:47,922] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions LOG-TRACKER-TOPIC-0 (kafka.server.ReplicaFetcherManager)
+[2017-01-10 09:28:48,067] INFO Completed load of log LOG-TRACKER-TOPIC-0 with 1 log segments and log end offset 0 in 124 ms (kafka.log.Log)
+[2017-01-10 09:28:48,076] INFO Created log for partition [LOG-TRACKER-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
+[2017-01-10 09:28:48,079] INFO Partition [LOG-TRACKER-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [LOG-TRACKER-TOPIC,0] (kafka.cluster.Partition)
+[2017-01-10 09:31:47,053] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
+[2017-01-10 09:31:47,058] INFO [KafkaApi-0] Auto creation of topic HEARTBEAT-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
+[2017-01-10 09:31:47,106] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HEARTBEAT-TOPIC-0 (kafka.server.ReplicaFetcherManager)
+[2017-01-10 09:31:47,118] INFO Completed load of log HEARTBEAT-TOPIC-0 with 1 log segments and log end offset 0 in 5 ms (kafka.log.Log)
+[2017-01-10 09:31:47,122] INFO Created log for partition [HEARTBEAT-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
+[2017-01-10 09:31:47,123] INFO Partition [HEARTBEAT-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [HEARTBEAT-TOPIC,0] (kafka.cluster.Partition)
+[2017-01-10 09:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 09:48:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 09:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 10:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 10:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 10:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 10:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 10:48:47,310] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 10:58:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 11:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 11:18:47,312] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 11:28:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 11:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 11:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 11:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 12:08:47,308] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 12:18:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 12:28:47,310] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 12:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 12:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 12:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 13:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 13:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 13:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 13:38:47,308] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 13:48:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 13:58:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 14:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 14:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 14:28:47,330] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 7 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 14:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 14:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 14:58:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 15:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 15:18:47,308] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 15:28:47,311] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 15:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 15:48:47,308] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 15:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 16:08:47,309] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 16:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 16:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 16:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 16:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 16:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 17:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 17:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 17:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 17:38:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 17:48:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 17:58:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 18:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 18:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 18:28:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 18:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 18:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 18:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 19:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 19:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 19:28:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 19:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 19:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 19:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 20:08:47,310] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 20:18:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 20:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 20:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 20:48:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 20:58:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 21:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 21:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 21:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 21:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 21:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 21:58:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 22:08:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 22:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 22:28:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 22:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 22:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 22:58:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 23:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 23:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 23:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 23:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 23:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-10 23:58:47,308] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 00:08:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 00:18:47,307] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 00:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 00:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 00:48:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 00:58:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 01:08:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 01:18:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 01:28:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-11 01:38:47,306] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-12 08:08:33,900] INFO KafkaConfig values: 
 	advertised.host.name = null
 	advertised.listeners = null
 	advertised.port = null
@@ -307,228 +417,47 @@ org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper
 	zookeeper.set.acl = false
 	zookeeper.sync.time.ms = 2000
  (kafka.server.KafkaConfig)
-[2016-12-31 07:04:58,885] INFO starting (kafka.server.KafkaServer)
-[2016-12-31 07:04:58,909] INFO [ThrottledRequestReaper-Fetch], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
-[2016-12-31 07:04:58,913] INFO [ThrottledRequestReaper-Produce], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
-[2016-12-31 07:04:58,925] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
-[2016-12-31 07:04:59,297] INFO Cluster ID = QziQkE9pRhaRBKxw22Vt6Q (kafka.server.KafkaServer)
-[2016-12-31 07:04:59,341] INFO Log directory '/tmp/kafka-logs' not found, creating it. (kafka.log.LogManager)
-[2016-12-31 07:04:59,369] INFO Loading logs. (kafka.log.LogManager)
-[2016-12-31 07:04:59,380] INFO Logs loading complete in 11 ms. (kafka.log.LogManager)
-[2016-12-31 07:04:59,474] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
-[2016-12-31 07:04:59,479] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
-[2016-12-31 07:04:59,489] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
-[2016-12-31 07:04:59,553] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
-[2016-12-31 07:04:59,559] INFO [Socket Server on Broker 0], Started 1 acceptor threads (kafka.network.SocketServer)
-[2016-12-31 07:04:59,586] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:04:59,587] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:04:59,631] INFO Creating /controller (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:04:59,648] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:04:59,649] INFO 0 successfully elected as leader (kafka.server.ZookeeperLeaderElector)
-[2016-12-31 07:04:59,739] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:04:59,752] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:04:59,754] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:04:59,775] INFO [GroupCoordinator 0]: Starting up. (kafka.coordinator.GroupCoordinator)
-[2016-12-31 07:04:59,785] INFO [GroupCoordinator 0]: Startup complete. (kafka.coordinator.GroupCoordinator)
-[2016-12-31 07:04:59,787] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 2 milliseconds. (kafka.coordinator.GroupMetadataManager)
-[2016-12-31 07:04:59,856] INFO Will not load MX4J, mx4j-tools.jar is not in the classpath (kafka.utils.Mx4jLoader$)
-[2016-12-31 07:04:59,903] INFO Creating /brokers/ids/0 (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:04:59,911] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:04:59,913] INFO Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT -> EndPoint(vagrant-ubuntu-trusty.vagrantup.com,9092,PLAINTEXT) (kafka.utils.ZkUtils)
-[2016-12-31 07:04:59,915] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
-[2016-12-31 07:04:59,941] INFO New leader is 0 (kafka.server.ZookeeperLeaderElector$LeaderChangeListener)
-[2016-12-31 07:04:59,996] INFO [Kafka Server 0], started (kafka.server.KafkaServer)
-[2016-12-31 07:05:16,583] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
-[2016-12-31 07:05:16,591] INFO [KafkaApi-0] Auto creation of topic LOG-TRACKER-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
-[2016-12-31 07:05:16,714] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions LOG-TRACKER-TOPIC-0 (kafka.server.ReplicaFetcherManager)
-[2016-12-31 07:05:16,843] INFO Completed load of log LOG-TRACKER-TOPIC-0 with 1 log segments and log end offset 0 in 112 ms (kafka.log.Log)
-[2016-12-31 07:05:16,846] INFO Created log for partition [LOG-TRACKER-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
-[2016-12-31 07:05:16,848] INFO Partition [LOG-TRACKER-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [LOG-TRACKER-TOPIC,0] (kafka.cluster.Partition)
-[2016-12-31 07:06:12,044] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
-[2016-12-31 07:06:12,046] INFO [KafkaApi-0] Auto creation of topic HEARTBEAT-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
-[2016-12-31 07:06:12,077] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HEARTBEAT-TOPIC-0 (kafka.server.ReplicaFetcherManager)
-[2016-12-31 07:06:12,082] INFO Completed load of log HEARTBEAT-TOPIC-0 with 1 log segments and log end offset 0 in 1 ms (kafka.log.Log)
-[2016-12-31 07:06:12,084] INFO Created log for partition [HEARTBEAT-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
-[2016-12-31 07:06:12,085] INFO Partition [HEARTBEAT-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [HEARTBEAT-TOPIC,0] (kafka.cluster.Partition)
-[2016-12-31 07:11:21,663] INFO KafkaConfig values: 
-	advertised.host.name = null
-	advertised.listeners = null
-	advertised.port = null
-	authorizer.class.name = 
-	auto.create.topics.enable = true
-	auto.leader.rebalance.enable = true
-	background.threads = 10
-	broker.id = 0
-	broker.id.generation.enable = true
-	broker.rack = null
-	compression.type = producer
-	connections.max.idle.ms = 600000
-	controlled.shutdown.enable = true
-	controlled.shutdown.max.retries = 3
-	controlled.shutdown.retry.backoff.ms = 5000
-	controller.socket.timeout.ms = 30000
-	default.replication.factor = 1
-	delete.topic.enable = false
-	fetch.purgatory.purge.interval.requests = 1000
-	group.max.session.timeout.ms = 300000
-	group.min.session.timeout.ms = 6000
-	host.name = 
-	inter.broker.protocol.version = 0.10.1-IV2
-	leader.imbalance.check.interval.seconds = 300
-	leader.imbalance.per.broker.percentage = 10
-	listeners = null
-	log.cleaner.backoff.ms = 15000
-	log.cleaner.dedupe.buffer.size = 134217728
-	log.cleaner.delete.retention.ms = 86400000
-	log.cleaner.enable = true
-	log.cleaner.io.buffer.load.factor = 0.9
-	log.cleaner.io.buffer.size = 524288
-	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
-	log.cleaner.min.cleanable.ratio = 0.5
-	log.cleaner.min.compaction.lag.ms = 0
-	log.cleaner.threads = 1
-	log.cleanup.policy = [delete]
-	log.dir = /tmp/kafka-logs
-	log.dirs = /tmp/kafka-logs
-	log.flush.interval.messages = 9223372036854775807
-	log.flush.interval.ms = null
-	log.flush.offset.checkpoint.interval.ms = 60000
-	log.flush.scheduler.interval.ms = 9223372036854775807
-	log.index.interval.bytes = 4096
-	log.index.size.max.bytes = 10485760
-	log.message.format.version = 0.10.1-IV2
-	log.message.timestamp.difference.max.ms = 9223372036854775807
-	log.message.timestamp.type = CreateTime
-	log.preallocate = false
-	log.retention.bytes = -1
-	log.retention.check.interval.ms = 300000
-	log.retention.hours = 168
-	log.retention.minutes = null
-	log.retention.ms = null
-	log.roll.hours = 168
-	log.roll.jitter.hours = 0
-	log.roll.jitter.ms = null
-	log.roll.ms = null
-	log.segment.bytes = 1073741824
-	log.segment.delete.delay.ms = 60000
-	max.connections.per.ip = 2147483647
-	max.connections.per.ip.overrides = 
-	message.max.bytes = 1000012
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.sample.window.ms = 30000
-	min.insync.replicas = 1
-	num.io.threads = 8
-	num.network.threads = 3
-	num.partitions = 1
-	num.recovery.threads.per.data.dir = 1
-	num.replica.fetchers = 1
-	offset.metadata.max.bytes = 4096
-	offsets.commit.required.acks = -1
-	offsets.commit.timeout.ms = 5000
-	offsets.load.buffer.size = 5242880
-	offsets.retention.check.interval.ms = 600000
-	offsets.retention.minutes = 1440
-	offsets.topic.compression.codec = 0
-	offsets.topic.num.partitions = 50
-	offsets.topic.replication.factor = 3
-	offsets.topic.segment.bytes = 104857600
-	port = 9092
-	principal.builder.class = class org.apache.kafka.common.security.auth.DefaultPrincipalBuilder
-	producer.purgatory.purge.interval.requests = 1000
-	queued.max.requests = 500
-	quota.consumer.default = 9223372036854775807
-	quota.producer.default = 9223372036854775807
-	quota.window.num = 11
-	quota.window.size.seconds = 1
-	replica.fetch.backoff.ms = 1000
-	replica.fetch.max.bytes = 1048576
-	replica.fetch.min.bytes = 1
-	replica.fetch.response.max.bytes = 10485760
-	replica.fetch.wait.max.ms = 500
-	replica.high.watermark.checkpoint.interval.ms = 5000
-	replica.lag.time.max.ms = 10000
-	replica.socket.receive.buffer.bytes = 65536
-	replica.socket.timeout.ms = 30000
-	replication.quota.window.num = 11
-	replication.quota.window.size.seconds = 1
-	request.timeout.ms = 30000
-	reserved.broker.max.id = 1000
-	sasl.enabled.mechanisms = [GSSAPI]
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.principal.to.local.rules = [DEFAULT]
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.mechanism.inter.broker.protocol = GSSAPI
-	security.inter.broker.protocol = PLAINTEXT
-	socket.receive.buffer.bytes = 102400
-	socket.request.max.bytes = 104857600
-	socket.send.buffer.bytes = 102400
-	ssl.cipher.suites = null
-	ssl.client.auth = none
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
-	ssl.endpoint.identification.algorithm = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLS
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	unclean.leader.election.enable = true
-	zookeeper.connect = localhost:2181
-	zookeeper.connection.timeout.ms = 6000
-	zookeeper.session.timeout.ms = 6000
-	zookeeper.set.acl = false
-	zookeeper.sync.time.ms = 2000
- (kafka.server.KafkaConfig)
-[2016-12-31 07:11:21,756] INFO starting (kafka.server.KafkaServer)
-[2016-12-31 07:11:21,780] INFO [ThrottledRequestReaper-Fetch], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
-[2016-12-31 07:11:21,784] INFO [ThrottledRequestReaper-Produce], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
-[2016-12-31 07:11:21,795] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
-[2016-12-31 07:11:22,215] INFO Cluster ID = 8g4wMBEuSZmDaex6V-tmZg (kafka.server.KafkaServer)
-[2016-12-31 07:11:22,251] INFO Log directory '/tmp/kafka-logs' not found, creating it. (kafka.log.LogManager)
-[2016-12-31 07:11:22,270] INFO Loading logs. (kafka.log.LogManager)
-[2016-12-31 07:11:22,281] INFO Logs loading complete in 10 ms. (kafka.log.LogManager)
-[2016-12-31 07:11:22,388] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
-[2016-12-31 07:11:22,391] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
-[2016-12-31 07:11:22,399] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
-[2016-12-31 07:11:22,459] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
-[2016-12-31 07:11:22,464] INFO [Socket Server on Broker 0], Started 1 acceptor threads (kafka.network.SocketServer)
-[2016-12-31 07:11:22,491] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:11:22,492] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:11:22,537] INFO Creating /controller (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:11:22,550] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:11:22,551] INFO 0 successfully elected as leader (kafka.server.ZookeeperLeaderElector)
-[2016-12-31 07:11:22,642] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:11:22,649] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:11:22,650] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
-[2016-12-31 07:11:22,672] INFO [GroupCoordinator 0]: Starting up. (kafka.coordinator.GroupCoordinator)
-[2016-12-31 07:11:22,676] INFO [GroupCoordinator 0]: Startup complete. (kafka.coordinator.GroupCoordinator)
-[2016-12-31 07:11:22,678] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 2 milliseconds. (kafka.coordinator.GroupMetadataManager)
-[2016-12-31 07:11:22,725] INFO Will not load MX4J, mx4j-tools.jar is not in the classpath (kafka.utils.Mx4jLoader$)
-[2016-12-31 07:11:22,783] INFO Creating /brokers/ids/0 (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:11:22,789] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
-[2016-12-31 07:11:22,791] INFO Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT -> EndPoint(vagrant-ubuntu-trusty.vagrantup.com,9092,PLAINTEXT) (kafka.utils.ZkUtils)
-[2016-12-31 07:11:22,793] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
-[2016-12-31 07:11:22,834] INFO New leader is 0 (kafka.server.ZookeeperLeaderElector$LeaderChangeListener)
-[2016-12-31 07:11:22,866] INFO [Kafka Server 0], started (kafka.server.KafkaServer)
-[2016-12-31 07:12:17,383] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
-[2016-12-31 07:12:17,386] INFO [KafkaApi-0] Auto creation of topic LOG-TRACKER-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
-[2016-12-31 07:12:17,532] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions LOG-TRACKER-TOPIC-0 (kafka.server.ReplicaFetcherManager)
-[2016-12-31 07:12:17,659] INFO Completed load of log LOG-TRACKER-TOPIC-0 with 1 log segments and log end offset 0 in 46 ms (kafka.log.Log)
-[2016-12-31 07:12:17,666] INFO Created log for partition [LOG-TRACKER-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
-[2016-12-31 07:12:17,667] INFO Partition [LOG-TRACKER-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [LOG-TRACKER-TOPIC,0] (kafka.cluster.Partition)
-[2016-12-31 07:13:32,457] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
-[2016-12-31 07:13:32,460] INFO [KafkaApi-0] Auto creation of topic HEARTBEAT-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
-[2016-12-31 07:13:32,484] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HEARTBEAT-TOPIC-0 (kafka.server.ReplicaFetcherManager)
-[2016-12-31 07:13:32,489] INFO Completed load of log HEARTBEAT-TOPIC-0 with 1 log segments and log end offset 0 in 1 ms (kafka.log.Log)
-[2016-12-31 07:13:32,491] INFO Created log for partition [HEARTBEAT-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
-[2016-12-31 07:13:32,491] INFO Partition [HEARTBEAT-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [HEARTBEAT-TOPIC,0] (kafka.cluster.Partition)
+[2017-01-12 08:08:34,421] INFO starting (kafka.server.KafkaServer)
+[2017-01-12 08:08:34,510] INFO [ThrottledRequestReaper-Fetch], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2017-01-12 08:08:34,543] INFO [ThrottledRequestReaper-Produce], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2017-01-12 08:08:34,562] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2017-01-12 08:08:35,666] INFO Cluster ID = Bj0QMgiQTzOl-lh3bjEUeQ (kafka.server.KafkaServer)
+[2017-01-12 08:08:35,765] INFO Log directory '/tmp/kafka-logs' not found, creating it. (kafka.log.LogManager)
+[2017-01-12 08:08:35,807] INFO Loading logs. (kafka.log.LogManager)
+[2017-01-12 08:08:35,827] INFO Logs loading complete in 19 ms. (kafka.log.LogManager)
+[2017-01-12 08:08:35,963] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+[2017-01-12 08:08:35,986] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+[2017-01-12 08:08:36,020] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+[2017-01-12 08:08:36,129] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
+[2017-01-12 08:08:36,135] INFO [Socket Server on Broker 0], Started 1 acceptor threads (kafka.network.SocketServer)
+[2017-01-12 08:08:36,178] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-12 08:08:36,179] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-12 08:08:36,263] INFO Creating /controller (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
+[2017-01-12 08:08:36,279] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
+[2017-01-12 08:08:36,280] INFO 0 successfully elected as leader (kafka.server.ZookeeperLeaderElector)
+[2017-01-12 08:08:36,572] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-12 08:08:36,587] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-12 08:08:36,588] INFO [ExpirationReaper-0], Starting  (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2017-01-12 08:08:36,650] INFO [GroupCoordinator 0]: Starting up. (kafka.coordinator.GroupCoordinator)
+[2017-01-12 08:08:36,653] INFO [GroupCoordinator 0]: Startup complete. (kafka.coordinator.GroupCoordinator)
+[2017-01-12 08:08:36,687] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 33 milliseconds. (kafka.coordinator.GroupMetadataManager)
+[2017-01-12 08:08:36,739] INFO Will not load MX4J, mx4j-tools.jar is not in the classpath (kafka.utils.Mx4jLoader$)
+[2017-01-12 08:08:36,801] INFO Creating /brokers/ids/0 (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
+[2017-01-12 08:08:36,831] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
+[2017-01-12 08:08:36,835] INFO Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT -> EndPoint(vagrant-ubuntu-trusty.vagrantup.com,9092,PLAINTEXT) (kafka.utils.ZkUtils)
+[2017-01-12 08:08:36,837] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+[2017-01-12 08:08:36,907] INFO New leader is 0 (kafka.server.ZookeeperLeaderElector$LeaderChangeListener)
+[2017-01-12 08:08:36,942] INFO [Kafka Server 0], started (kafka.server.KafkaServer)
+[2017-01-12 08:08:37,048] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
+[2017-01-12 08:08:37,054] INFO [KafkaApi-0] Auto creation of topic LOG-TRACKER-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
+[2017-01-12 08:08:37,295] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions LOG-TRACKER-TOPIC-0 (kafka.server.ReplicaFetcherManager)
+[2017-01-12 08:08:37,477] INFO Completed load of log LOG-TRACKER-TOPIC-0 with 1 log segments and log end offset 0 in 161 ms (kafka.log.Log)
+[2017-01-12 08:08:37,482] INFO Created log for partition [LOG-TRACKER-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
+[2017-01-12 08:08:37,484] INFO Partition [LOG-TRACKER-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [LOG-TRACKER-TOPIC,0] (kafka.cluster.Partition)
+[2017-01-12 08:10:54,313] INFO Topic creation {"version":1,"partitions":{"0":[0]}} (kafka.admin.AdminUtils$)
+[2017-01-12 08:10:54,318] INFO [KafkaApi-0] Auto creation of topic HEARTBEAT-TOPIC with 1 partitions and replication factor 1 is successful (kafka.server.KafkaApis)
+[2017-01-12 08:10:54,380] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HEARTBEAT-TOPIC-0 (kafka.server.ReplicaFetcherManager)
+[2017-01-12 08:10:54,390] INFO Completed load of log HEARTBEAT-TOPIC-0 with 1 log segments and log end offset 0 in 5 ms (kafka.log.Log)
+[2017-01-12 08:10:54,395] INFO Created log for partition [HEARTBEAT-TOPIC,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.10.1-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> true, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
+[2017-01-12 08:10:54,397] INFO Partition [HEARTBEAT-TOPIC,0] on broker 0: No checkpointed highwatermark is found for partition [HEARTBEAT-TOPIC,0] (kafka.cluster.Partition)
+[2017-01-12 08:18:36,652] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.GroupMetadataManager)

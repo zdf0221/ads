@@ -1,0 +1,13 @@
+package wu.leizi.project.webApi;
+
+public class mqCallBack implements callback, Runnable{
+	
+}
+
+interface callback {
+	public String retJSONStr();
+}
+
+class remoteInstace {
+	public void 
+}
