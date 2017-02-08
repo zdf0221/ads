@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 8089, host: 8089
   config.vm.network "forwarded_port", guest: 8088, host: 8088
   config.vm.network "forwarded_port", guest: 50070, host: 50070
-  config.vm.network "forwarded_port", guest: 6379, host: 6379
+  config.vm.network "forwarded_port", guest: 6379, host: 1234
     config.vm.network "forwarded_port", guest: 3306, host: 3305
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -71,4 +71,6 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+config.ssh.username="vagrant"
+config.ssh.password="vagrant"
 end
